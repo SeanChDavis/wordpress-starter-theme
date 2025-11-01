@@ -15,7 +15,7 @@ if ( post_password_required() ) {
         <?php
         if ( have_comments() ) :
             ?>
-            <span class="comments-title">
+            <h4 class="comments-title">
                 <?php
                 $wst_comment_count = get_comments_number();
                 if ( '1' === $wst_comment_count ) {
@@ -33,7 +33,7 @@ if ( post_password_required() ) {
                     );
                 }
                 ?>
-            </span>
+            </h4>
 
             <?php the_comments_navigation(); ?>
 

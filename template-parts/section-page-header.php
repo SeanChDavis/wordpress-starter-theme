@@ -21,7 +21,7 @@ if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
         <div class="container">
 
             <?php if ( ! empty( $title ) ) { ?>
-                <span class="page-title"><?php echo $title; ?></span>
+                <h1 class="page-title"><?php echo $title; ?></h1>
             <?php } ?>
 
             <?php if ( ! empty( $description ) ) { ?>
