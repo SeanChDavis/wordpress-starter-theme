@@ -2,7 +2,7 @@
 
 This is a starter theme for WordPress. It is based on the classic [underscores.me](https://underscores.me) starter theme, though several things have been changed, added, or removed.
 
-**NOTE: This theme is meant for you to download and customize (if needed) for your own project. Limited support will be provided, other than fixing obvious bugs, typos, or adding necessary features. No updates are pushed directly to users. Each download exists as a snapshot in time.**
+**NOTE: This theme is meant for you to download and customize (if needed) for your own project. Limited support will be provided, other than fixing obvious bugs, typos, or adding any necessary features. No updates are pushed directly to users. Each download exists as a snapshot in time.**
 
 ## Development Setup
 
@@ -22,9 +22,9 @@ This theme uses [Node.js](https://nodejs.org/en/) and [Grunt](https://gruntjs.co
 * Includes Wide page template (page-width content column, no sidebar)
 * Includes Narrow page template (centered, narrow content column, no sidebar) 
 * Includes Page Sections page template (CSS optimized to use the Group block as a full-width page section with constrained content inside)
-* Includes blog template (home.php)
+* Includes a blog template (home.php)
 * Customizable page headers via WordPress core functionality (title and excerpt), custom page header function parameters in individual templates, or Advanced Custom Fields settings per page
-* Desktop menu with drop-down support and mobile menu with expandable sub-menus on click
+* Desktop menu with drop-down support and mobile menu with expandable submenus on click
 * Centered blog post layout with no sidebar for easy reading
 * Condensed search results page layout
 * Color scheme options in the Customizer, available for use in the Block Editor
@@ -90,7 +90,7 @@ The above HTML structure is only achievable when you are the HTML author. Howeve
 
 Anything you place *inside* the top-level Group block will use default styling with no adjustments, including nested Group blocks.
 
-With this HTML structure and style system in place, you have the freedom to create custom theme templates using the style system, or create the same in the block editor with the Page Sections template.
+With this HTML structure and style system in place, you have the freedom to create custom theme templates using the style system or create the same in the block editor with the Page Sections template.
 
 *NOTE: If using the Page Sections template, the top-level Group block can also take advantage of the `.inner` class modifiers to adjust the vertical padding.*
 
@@ -166,7 +166,7 @@ The area is separated into two columns. The left column is wide with a single wi
 
 The fat footer only displays columns whose widget areas have widgets in them. If none of the areas have widgets in them, the entire fat footer will disappear.
 
-Navigation menus placed in the fat footer will automatically be styled to display vertically and do not support sub-menus.
+Navigation menus placed in the fat footer will automatically be styled to display vertically and do not support submenus.
 
 ## Advanced Custom Fields
 
@@ -178,7 +178,7 @@ With either version of ACF activated, you can import the following `.json` file 
 
 On site **pages** that are editable from the WordPress dashboard, you'll see a new **Page Settings** metabox. This metabox allows you to customize the page header title and description for any page. 
 
-*Note: The Field Group is set to only display on WordPress pages, and only if the page *does not* use the Page Sections page template. If a page header is desired in the Page Sections template, it should be build in the block editor itself.*
+*Note: The Field Group is set to only display on WordPress pages, and only if the page *does not* use the Page Sections page template. If a page header is desired in the Page Sections template, it should be built in the block editor itself.*
 
 ## Theme Issues
 
