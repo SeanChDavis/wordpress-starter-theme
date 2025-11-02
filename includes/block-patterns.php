@@ -10,7 +10,7 @@ function wst_register_block_pattern_category() {
 	register_block_pattern_category(
 		'wst-page-sections-elements',
 		array(
-			'label' => __( 'Page Sections & Elements', 'wst' )
+			'label' => __( 'WST Page Sections & Elements', 'wst' )
 		)
 	);
 }
