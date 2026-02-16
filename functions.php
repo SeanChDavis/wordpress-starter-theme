@@ -3,7 +3,7 @@
  * Theme functions and definitions
  */
 
-const THEME_VERSION = '1.0.0';
+const THEME_VERSION = '1.0.1';
 
 define( 'THEME_URI', get_home_url() );
 define( 'THEME_NAME', get_bloginfo( 'name' ) );
