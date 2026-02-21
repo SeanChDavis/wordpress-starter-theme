@@ -17,7 +17,7 @@
 	.logged-in-as,
 	.comment-notes {
 		color: var(--subdued-body);
-		font-size: 14px;
+		font-size: .83rem;
 		font-weight: 500;
 
 		a {
@@ -36,14 +36,14 @@
 		.pingback {
 
 			.comment-meta {
-				font-size: 14px;
+				font-size: .83rem;
 				font-weight: 600;
 				margin-bottom: 1rem;
 
 				.comment-author {
 
 					.fn {
-						font-size: 20px;
+						font-size: 1.1rem;
 
 						a {
 							text-decoration: none;
@@ -77,7 +77,7 @@
 
 				a {
 					color: var(--subdued-action);
-					font-size: 13px;
+					font-size: .83rem;
 					font-weight: 700;
 				}
 			}
@@ -97,7 +97,7 @@
 			margin-bottom: .5rem;
 
 			.comment-body {
-				font-size: 15px;
+				font-size: .88rem;
 
 				a {
 					color: var(--subdued-action);
@@ -131,7 +131,7 @@
 			&[class*="-url"] {
 
 				label {
-					font-size: 15px;
+					font-size: .88rem;
 				}
 			}
 		}
@@ -140,7 +140,7 @@
 	.comment-form-cookies-consent {
 
 		label {
-			font-size: 15px;
+			font-size: .88rem;
 			font-weight: 500;
 			margin-left: 6px;
 		}
@@ -159,7 +159,7 @@
 		#cancel-comment-reply-link {
 			color: var(--subdued-action);
 			display: inline-block;
-			font-size: 15px;
+			font-size: .88rem;
 			margin-left: 10px;
 		}
 

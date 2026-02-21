@@ -5,84 +5,52 @@ body {
 	}
 }
 
-.inner {
-	margin: 0 auto;
-	padding: 3rem 10px;
-
-	@media all and (min-width: 992px) {
-		padding-bottom: 4rem;
-		padding-top: 4rem;
-	}
-
-	@media all and (min-width: 1200px) {
-		padding-bottom: 5rem;
-		padding-top: 5rem;
-	}
+/**
+ * Bootstrap Container: https://getbootstrap.com/docs/5.3/layout/containers/
+ *
+ * .container and .container-{breakpoint} are fundamental Bootstrap classes that
+ * contain, pad, and align content. They are used to create responsive, centered
+ * containers for website content.
+ *
+ * However, the Container style rules are only concerned with the width of the
+ * content container, not its vertical spacing or vertical alignment.
+ *
+ * This theme adds vertical padding to containers at various sizes. For example,
+ * an element using "container large" will still use Bootstrap's width-related
+ * styles, but will also have a top and bottom padding given by the addition of the
+ * .large class.
+ *
+ * These CSS rules are written in mixins for easy reuse. See _mixins.scss.
+ */
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	@include section-container;
 
 	&.tiny {
-		padding-bottom: 1.5rem;
-		padding-top: 1.5rem;
-
-		@media all and (min-width: 992px) {
-			padding-bottom: 1.5rem;
-			padding-top: 1.5rem;
-		}
-
-		@media all and (min-width: 1200px) {
-			padding-bottom: 1.5rem;
-			padding-top: 1.5rem;
-		}
+		@include section-container__tiny;
 	}
 
 	&.small {
-
-		@media all and (min-width: 992px) {
-			padding-bottom: 3rem;
-			padding-top: 3rem;
-		}
-
-		@media all and (min-width: 1200px) {
-			padding-bottom: 3rem;
-			padding-top: 3rem;
-		}
+		@include section-container__small;
 	}
 
 	&.medium {
-
-		@media all and (min-width: 1200px) {
-			padding-bottom: 4rem;
-			padding-top: 4rem;
-		}
+		@include section-container__medium;
 	}
 
 	&.large {
-
-		@media all and (min-width: 1400px) {
-			padding-bottom: 7rem;
-			padding-top: 7rem;
-		}
+		@include section-container__large;
 	}
 
 	&.huge {
+		@include section-container__huge;
+	}
 
-		@media all and (min-width: 768px) {
-			padding-bottom: 4rem;
-			padding-top: 4rem;
-		}
-
-		@media all and (min-width: 992px) {
-			padding-bottom: 5rem;
-			padding-top: 5rem;
-		}
-
-		@media all and (min-width: 1200px) {
-			padding-bottom: 7rem;
-			padding-top: 7rem;
-		}
-
-		@media all and (min-width: 1400px) {
-			padding-bottom: 9rem;
-			padding-top: 9rem;
-		}
+	&.no-vertical-spacing {
+		@include section-container__no-vertical-spacing;
 	}
 }

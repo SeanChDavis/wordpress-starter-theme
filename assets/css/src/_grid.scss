@@ -8,11 +8,7 @@
 		}
 
 		.entry-title {
-			font-size: 1.5rem;
-
-			@media all and (min-width: 768px) {
-				font-size: 1.75rem;
-			}
+			font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 
 			a {
 				color: var(--body);
@@ -25,10 +21,6 @@
 				}
 			}
 		}
-	}
-
-	.entry-content {
-		font-size: 17px;
 	}
 
 	.entry-footer {

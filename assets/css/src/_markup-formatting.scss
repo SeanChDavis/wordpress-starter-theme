@@ -10,93 +10,26 @@ h6, .h6,
 	display: block;
 	font-weight: 700;
 	line-height: 1.4;
-	margin: 0 0 1.25rem;
+	margin: 0 0 clamp(1rem, 1.75vw, 1.25rem);
 }
 
 h1, .h1,
+h2, .h2,
 .page-title,
 .page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child,
 .archive .page-title span {
-	font-size: 2rem;
-
-	@media all and (min-width: 576px) {
-		font-size: 2.5rem;
-	}
-
-	@media all and (min-width: 768px) {
-		font-size: 3rem;
-	}
-
-	@media all and (min-width: 992px) {
-		font-size: 3.5rem;
-	}
-
-	@media all and (min-width: 1200px) {
-		font-size: 4rem;
-	}
-}
-
-h2, .h2 {
-	font-size: 1.75rem;
-
-	@media all and (min-width: 576px) {
-		font-size: 2rem;
-	}
-
-	@media all and (min-width: 768px) {
-		font-size: 2.5rem;
-	}
-
-	@media all and (min-width: 992px) {
-		font-size: 3rem;
-	}
-
-	@media all and (min-width: 1200px) {
-		font-size: 3.5rem;
-	}
+	font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 h3, .h3,
 .section-title {
-	font-size: 1.5rem;
-
-	@media all and (min-width: 576px) {
-		font-size: 1.75rem;
-	}
-
-	@media all and (min-width: 768px) {
-		font-size: 2rem;
-	}
-
-	@media all and (min-width: 992px) {
-		font-size: 2.25rem;
-	}
-
-	@media all and (min-width: 1200px) {
-		font-size: 2.5rem;
-	}
+	font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 h4, .h4 {
-	font-size: 1.25rem;
-
-	@media all and (min-width: 576px) {
-		font-size: 1.5rem;
-	}
-
-	@media all and (min-width: 768px) {
-		font-size: 1.75rem;
-	}
-
-	@media all and (min-width: 992px) {
-		font-size: 2rem;
-	}
-
-	@media all and (min-width: 1200px) {
-		font-size: 2.25rem;
-	}
+	font-size: clamp(1.25rem, 5vw, 2.25rem);
 }
 
 h5, .h5,
@@ -105,15 +38,7 @@ h6, .h6 {
 }
 
 p {
-	margin-bottom: 1.25rem;
-
-	@media all and (min-width: 576px) {
-		margin-bottom: 1.5rem;
-	}
-
-	@media all and (min-width: 992px) {
-		margin-bottom: 1.67rem;
-	}
+	margin-bottom: clamp(1.25rem, 2vw, 1.67rem);
 
 	&:last-child {
 		margin-bottom: 0;
@@ -122,16 +47,8 @@ p {
 
 ul,
 ol {
-	margin: 0 0 1.25rem 1.25rem;
+	margin: 0 0 clamp(1.25rem, 2vw, 1.67rem) 1.25rem;
 	padding-left: 1rem;
-
-	@media all and (min-width: 576px) {
-		margin-bottom: 1.5rem;
-	}
-
-	@media all and (min-width: 992px) {
-		margin-bottom: 1.67rem;
-	}
 
 	li {
 		margin-bottom: .5rem;
@@ -187,7 +104,7 @@ address {
 }
 
 table {
-	font-size: 90%;
+	font-size: .88rem;
 }
 
 .alignleft {
@@ -215,15 +132,6 @@ table {
 	@include heading-font-reduced;
 
 	& > [class*="wp-block-"] {
-		margin-bottom: 1.25rem;
-
-		@media all and (min-width: 576px) {
-			margin-bottom: 1.5rem;
-		}
-
-		@media all and (min-width: 992px) {
-			margin-bottom: 2rem;
-		}
 
 		&:last-child {
 			margin-bottom: 0;

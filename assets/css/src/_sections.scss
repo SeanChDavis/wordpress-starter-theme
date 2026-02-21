@@ -9,7 +9,7 @@ section[class*="-section"] {
 			p {
 
 				@media all and (min-width: 768px) {
-					font-size: 21px;
+					font-size: clamp(1rem, 2vw, 1.167rem);
 				}
 			}
 		}
@@ -37,17 +37,17 @@ section[class*="-section"] {
 		& + p {
 
 			@media all and (min-width: 768px) {
-				font-size: 21px;
+				font-size: clamp(1rem, 2vw, 1.167rem);
 			}
 		}
 	}
 
 	.page-description {
 		color: var(--subdued-body);
-		max-width: 768px;
+		max-width: 640px;
 
 		@media all and (min-width: 768px) {
-			font-size: 21px;
+			font-size: clamp(1rem, 2vw, 1.167rem);
 		}
 	}
 

@@ -1,6 +1,6 @@
 #colophon {
 	color: var(--subdued-body);
-	font-size: 15px;
+	font-size: .88rem;
 
 	a {
 		color: var(--body);
@@ -25,7 +25,6 @@
 
 .fat-footer-section {
 	@include heading-font-reduced;
-	font-size: 17px;
 
 	.fat-col {
 
@@ -42,15 +41,7 @@
 		.widget_block {
 
 			p {
-				margin-bottom: 1.25rem;
-
-				@media all and (min-width: 576px) {
-					margin-bottom: 1.5rem;
-				}
-
-				@media all and (min-width: 992px) {
-					margin-bottom: 1.67rem;
-				}
+				margin-bottom: clamp(1.25rem, 2vw, 1.67rem);
 			}
 		}
 	}
@@ -59,7 +50,7 @@
 
 		ul:not(.wp-block-social-links),
 		.menu {
-			font-size: 15px;
+			font-size: .88rem;
 			list-style: none;
 			margin: 0;
 			padding: 0;

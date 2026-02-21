@@ -4,26 +4,11 @@
 .wp-block-quote,
 .wp-block-quote-editor {
 	background-color: var(--lightest);
-	color: var(--subdued-body);
-	font-size: 95%;
-	font-weight: 500;
-	padding: 1.5rem;
-
-	@media all and (min-width: 768px) {
-		padding: 2rem;
-	}
-
-	p {
-		font-size: 90%;
-
-		&:last-of-type {
-			margin-bottom: .5rem;
-		}
-	}
+	padding: clamp(1.25rem, 2.6vw, 2rem) clamp(1.5rem, 2.6vw, 2rem);
 
 	cite {
-		font-size: 80%;
-		font-weight: 400;
+		color: var(--subdued-body);
+		font-size: .88rem;
 
 		&:before {
 			content: '— ';
@@ -34,22 +19,18 @@
 .wp-block-pullquote,
 .wp-block-pullquote-editor {
 	background-color: var(--lightest);
+	padding: clamp(2.5rem, 5.5vw, 4.5rem) clamp(2rem, 4vw, 3rem);
 
 	blockquote {
-		color: var(--subdued-body);
 
 		p {
-			color: var(--body);
-			font-size: 115%;
+			font-size: clamp(1.15rem, 2vw, 1.5rem);
 			font-weight: 600;
-
-			&:last-of-type {
-				margin-bottom: .5rem;
-			}
 		}
 
 		cite {
-			font-size: 80%;
+			color: var(--subdued-body);
+			font-size: .88rem;
 
 			&:before {
 				content: '— ';
@@ -62,7 +43,7 @@
 .wp-block-code-editor,
 .wp-block-preformatted,
 .wp-block-preformatted-editor {
-	font-size: 80%;
+	font-size: .88rem;
 }
 
 .wp-block-table,

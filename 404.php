@@ -12,11 +12,9 @@ get_template_part( 'template-parts/section', 'page-header', array(
 ?>
 
 	<main id="content" class="site-main">
-        <div class="inner">
-            <div class="container">
-	            <?php get_search_form(); ?>
-            </div>
-        </div>
+		<div class="container">
+			<?php get_search_form(); ?>
+		</div>
 	</main>
 
 <?php

@@ -1,14 +1,6 @@
-body {
+html {
 	// FYI: font-family (--bs-font-sans-serif) inherited from bootstrap-reboot
-	font-size: 17px;
+	font-size: 18px; // All other font sizes are relative to this via rem
 	line-height: 1.6;
 	overflow-wrap: break-word;
-
-	@media all and (min-width: 1200px) {
-		font-size: 18px;
-	}
-
-	@media all and (min-width: 1400px) {
-		font-size: 19px;
-	}
 }

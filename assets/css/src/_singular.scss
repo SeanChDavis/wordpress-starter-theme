@@ -32,30 +32,14 @@
 
 		.page-header {
 
-			.inner {
-				padding-bottom: 4.5rem;
-
-				@media all and (min-width: 768px) {
-					padding-bottom: 6rem;
-				}
-
-				@media all and (min-width: 992px) {
-					padding-bottom: 7rem;
-				}
-
-				@media all and (min-width: 1200px) {
-					padding-bottom: 8rem;
-				}
-
-				@media all and (min-width: 1400px) {
-					padding-bottom: 9rem;
-				}
+			.container {
+				padding-bottom: clamp(4.5rem, 11.5vw, 9rem);
 			}
 		}
 
 		.site-main {
 
-			.inner {
+			.container {
 				padding-top: 0;
 			}
 
@@ -97,7 +81,7 @@
 .entry-meta,
 .entry-footer {
 	color: var(--subdued-body);
-	font-size: 14px;
+	font-size: .83rem;
 	font-weight: 500;
 
 	a {

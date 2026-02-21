@@ -17,31 +17,27 @@ if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
 ?>
 
 <section class="page-header background-lightest">
-    <div class="inner">
-        <div class="container">
+	<div class="container">
+		<?php if ( ! empty( $title ) ) { ?>
+			<h1 class="page-title"><?php echo $title; ?></h1>
+		<?php } ?>
 
-            <?php if ( ! empty( $title ) ) { ?>
-                <h1 class="page-title"><?php echo $title; ?></h1>
-            <?php } ?>
+		<?php if ( ! empty( $description ) ) { ?>
+			<div class="page-description">
+				<?php echo wpautop( $description ); ?>
+			</div>
+		<?php } ?>
 
-            <?php if ( ! empty( $description ) ) { ?>
-                <div class="page-description">
-                    <?php echo wpautop( $description ); ?>
-                </div>
-            <?php } ?>
+		<?php if ( is_single() ) { ?>
+			<div class="entry-meta">
+				<?php wst_posted_on(); ?>
+			</div>
+		<?php } ?>
 
-            <?php if ( is_single() ) { ?>
-                <div class="entry-meta">
-                    <?php wst_posted_on(); ?>
-                </div>
-            <?php } ?>
-
-            <?php if ( is_search() ) { ?>
-                <div class="search-form mt-5">
-                    <?php get_search_form(); ?>
-                </div>
-            <?php } ?>
-
-        </div>
-    </div>
+		<?php if ( is_search() ) { ?>
+			<div class="search-form mt-5">
+				<?php get_search_form(); ?>
+			</div>
+		<?php } ?>
+	</div>
 </section>

@@ -26,14 +26,9 @@ body {
 
 	/* The post title - let's visually separate it from the post_content */
 	.edit-post-visual-editor__post-title-wrapper {
-		border-bottom: 1px solid var(--lightest);
-		color: #1e1e1e;
-		margin-bottom: 2rem;
-		padding-bottom: 3rem;
-
-		h1 {
-			font-size: 2rem;
-		}
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 1rem;
+		padding-bottom: 1.5rem;
 	}
 
 	/* All user-generated post_content */
@@ -44,51 +39,46 @@ body {
 
 			/* Layout related top-level blocks get Bootstrap .container styles */
 			& > [class*="__inner-container"] {
-				@include block-page-section-inner-container;
-
-				@media all and (min-width: 576px) {
-					padding-left: 2rem;
-					padding-right: 2rem;
-				}
+				@include section-container;
 			}
 
 			/**
-			 * Vertical padding header classes top-level blocks
+			 * Vertical padding header classes added to top-level blocks
 			 */
 			&.tiny {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__tiny;
+					@include section-container__tiny;
 				}
 			}
 			&.small {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__small;
+					@include section-container__small;
 				}
 			}
 			&.medium {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__medium;
+					@include section-container__medium;
 				}
 			}
 			&.large {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__large;
+					@include section-container__large;
 				}
 			}
 			&.huge {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__huge;
+					@include section-container__huge;
 				}
 			}
-			&.no-spacing {
+			&.no-vertical-spacing {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__no-spacing;
+					@include section-container__no-vertical-spacing;
 				}
 			}
 		}
@@ -105,11 +95,7 @@ body {
 				& > .wp-block-group__inner-container {
 
 					.wp-block-buttons {
-						margin: 1rem 0;
-
-						@media all and (min-width: 768px) {
-							margin: 2rem 0;
-						}
+						margin: clamp(1rem, 2.5vw, 2rem) 0;
 
 						&:last-child {
 							margin-bottom: 0;
@@ -133,7 +119,6 @@ body {
 
 		.wp-block-button__link {
 			background-color: var(--action);
-			border-radius: 2px;
 		}
 	}
 

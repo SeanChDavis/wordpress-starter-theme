@@ -2,15 +2,13 @@
 Theme Name: WST
 Author: Sean Davis
 Description: A starter theme for WordPress.
-Version: 1.0.1
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: wst
 */
 
 /* Required Bootstrap styles */
-//@import "../../../node_modules/bootstrap/scss/functions";
-//@import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap-reboot";
 @import "../../../node_modules/bootstrap/scss/bootstrap-utilities";
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid";
@@ -20,7 +18,6 @@ Text Domain: wst
 @import "_mixins";
 
 /* Global styles */
-@import "_archive";
 @import "_blocks";
 @import "_comments";
 @import "_footer";
@@ -38,6 +35,3 @@ Text Domain: wst
 
 /* Make sure final color adjustments come last */
 @import "_colors";
-
-/* Template styles */
-@import "templates/_wide";

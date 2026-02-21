@@ -23,53 +23,53 @@
 		 * page-header seen throughout the theme, but on your custom page right in the editor.
 		 *
 		 * The CSS below represents a merger of Bootstrap's ".container" styles and this theme's
-		 * native ".inner" class.
+		 * native natively-styled page sections.
 		 */
 		& > [class*="wp-block-"] {
 
 			& > [class*="__inner-container"] {
-				@include block-page-section-inner-container;
+				@include section-container;
 			}
 
 			&.tiny {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__tiny;
+					@include section-container__tiny;
 				}
 			}
 
 			&.small {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__small;
+					@include section-container__small;
 				}
 			}
 
 			&.medium {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__medium;
+					@include section-container__medium;
 				}
 			}
 
 			&.large {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__large;
+					@include section-container__large;
 				}
 			}
 
 			&.huge {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__huge;
+					@include section-container__huge;
 				}
 			}
 
-			&.no-spacing {
+			&.no-vertical-spacing {
 
 				& > [class*="__inner-container"] {
-					@include block-page-section-inner-container__no-spacing;
+					@include section-container__no-vertical-spacing;
 				}
 			}
 		}
@@ -79,11 +79,11 @@
 		 */
 		& > .wp-block-group {
 
-			&.is-layout-constrained {
+			&.page-header {
 
-				&.page-header {
+				& > .wp-block-group__inner-container {
 
-					& > .wp-block-group__inner-container {
+					&.is-layout-constrained {
 
 						& > h1:first-child,
 						& > h2:first-child,
@@ -92,10 +92,10 @@
 						}
 
 						& > p {
-							max-width: 768px;
+							max-width: 640px;
 
 							@media all and (min-width: 768px) {
-								font-size: 21px;
+								font-size: clamp(1rem, 1.65vw, 1.167rem);
 							}
 
 							&:not(.has-text-color) {
@@ -104,34 +104,22 @@
 						}
 
 						.wp-block-buttons {
-							margin: 2rem 0;
-
-							@media all and (min-width: 768px) {
-								margin: 3rem 0;
-							}
+							margin: clamp(1.5rem, 3vw, 2.5rem) 0;
 
 							&:last-child {
 								margin-bottom: 0;
 							}
 						}
 					}
+				}
 
-					&.text-center {
-						text-align: center;
+				&.text-center {
+					text-align: center;
 
-						& > .wp-block-group__inner-container {
+					& > .wp-block-group__inner-container {
 
-							& > p {
-								margin: 0 auto;
-							}
-
-							& > .wp-block-buttons {
-								margin: 2rem auto;
-
-								@media all and (min-width: 768px) {
-									margin: 3rem auto;
-								}
-							}
+						& > p {
+							margin: 0 auto;
 						}
 					}
 				}

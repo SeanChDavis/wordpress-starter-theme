@@ -43,29 +43,28 @@ The `assets/js/scripts.js` file is compiled from all files in the `assets/js/src
 
 The theme uses the [Bootstrap](https://getbootstrap.com/docs/5.3/layout/grid/) Grid system for layouts. The `.container`, `.row`, and `.col` classes are used throughout the theme to give structure.
 
-However, the theme also has its own `.inner` class that provides vertical structure, best for creating page sections. A page section, in this context, is a horizontal section of the page that spans the entire width of the viewport. However, the content within the section is constrained to the page width. This works by combining the theme class with the Bootstrap classes. Example:
+However, the theme adds CSS to the [`.container` class](https://getbootstrap.com/docs/5.3/layout/containers/) that provides *vertical* structure, best for creating page sections. A "page section," in this context, is a horizontal section of the page that spans the entire width of the viewport. The content within the section is constrained to the page width.
+
+Bootstrap's `.container` class does not include vertical padding. It is only concerned with the width of content at all viewport sizes. This theme's additional CSS simply adds default vertical padding to all uses of `.container` and `.container-{breakpoint}`, as well as vertical padding variants when combined with an additional size class (`.tiny`, `.small`, `.medium`, `.large`, `.huge`, or `.no-vertical-spacing`).
+
+Example:
 
 ```html
-<!-- Wrapper class - spans full viewport width -->
+<!-- Generic wrapper class - spans full viewport width -->
 <section class="generic-section">
 
-    <!-- Vertical structure class - adds vertical padding to page sections -->
-    <div class="inner">
+    <!-- Bootstrap Grid class .container - keeps content horizontally constrained. Additionally, this theme adds vertical padding to the container. -->
+    <div class="container">
 
-        <!-- Bootstrap Grid class - keeps content horizontally constrained -->
-        <div class="container">
-
-            <!-- Bootstrap Grid class - flex container -->
-            <div class="row">
-                
-                <!-- Bootstrap Grid classes - flex items -->
-                <div class="col-12 col-lg-6">
-                    <p>Left column content</p>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <p>Right column content</p>
-                </div>
-                
+        <!-- Bootstrap Grid class .row - flex container -->
+        <div class="row">
+            
+            <!-- Bootstrap Grid classes .col (or .col-#) - flex items -->
+            <div class="col-12 col-lg-6">
+                <p>Left column content</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p>Right column content</p>
             </div>
             
         </div>
@@ -75,11 +74,15 @@ However, the theme also has its own `.inner` class that provides vertical struct
 </section>
 ```
 
-The `.generic-section` element is the page section. The `.inner` element is the vertical structure. The `.container`, `.row`, and `.col` elements are the Bootstrap Grid system.
+The `.generic-section` element is the page section. It typically does not need any spacing styles because its internal `.container` will handle that. The `.container`, `.row`, and `.col` elements are the Bootstrap Grid system. With these classes alone, you can create a wide page section with constrained content inside.
 
-The `.inner` class also supports additional (optional) class modifiers to adjust the vertical padding. Those classes are `.tiny`, `.small`, `.medium`, `.large`, and `.huge`.
+`<div class="container tiny">` would create a relatively small page section (great for header and footer). 
 
-`<div class="inner tiny">` would create a relatively small page section while `<div class="inner huge">` would create a very large page section.
+`<div class="container huge">` would create a page section with lots of vertical padding (great for design-oriented content).
+
+Note: All vertical padding added to `.container` is adjusted at breakpoints to reduce the vertical padding at smaller viewport sizes.
+
+Note: Everything mentioned above applies to both `.container` and `.container-{breakpoint}` classes.
 
 ### Block Editor (Gutenberg) Page Sections
 
@@ -88,11 +91,11 @@ The above HTML structure is only achievable when you are the HTML author. Howeve
 1. Be placed in the *Page Sections* page template
 2. Be a *top-level **Group** block* in the Content area
 
-Anything you place *inside* the top-level Group block will use default styling with no adjustments, including nested Group blocks.
+Anything you place *inside* the top-level Group block will inherit the HTML structure described above with no adjustments.
 
-With this HTML structure and style system in place, you have the freedom to create custom theme templates using the style system or create the same in the block editor with the Page Sections template.
+With this HTML structure and style system in place, you have the freedom to create custom theme templates using the style system or create the same visual structure in the Block Editor using the Page Sections template.
 
-*NOTE: If using the Page Sections template, the top-level Group block can also take advantage of the `.inner` class modifiers to adjust the vertical padding.*
+*NOTE: If using the Page Sections template, the top-level Group block can also take advantage of the class modifiers (like `.large`) to adjust the vertical padding. Just add the class modifier to the Additional CSS field in the Group block's settings in the Block Editor.*.*
 
 ### Page Headers
 
@@ -178,7 +181,7 @@ With either version of ACF activated, you can import the following `.json` file 
 
 On site **pages** that are editable from the WordPress dashboard, you'll see a new **Page Settings** metabox. This metabox allows you to customize the page header title and description for any page. 
 
-*Note: The Field Group is set to only display on WordPress pages, and only if the page *does not* use the Page Sections page template. If a page header is desired in the Page Sections template, it should be built in the block editor itself.*
+*Note: The Field Group is set to only display on WordPress pages, and only if the page *does not* use the Page Sections page template. If a page header is desired in the Page Sections template, it should be built in the Block Editor itself.*
 
 ## Theme Issues
 
