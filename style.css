@@ -10346,7 +10346,6 @@ input[type=submit],
   display: inline-block;
   padding: 0.53em 1.7em;
   font-size: 0.88rem;
-  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -10473,9 +10472,6 @@ select:focus {
 }
 #masthead .site-header-row .site-branding .custom-logo-link .custom-logo {
   max-width: 120px;
-}
-#masthead .site-header-row .site-branding .site-title {
-  font-weight: 700;
 }
 #masthead .site-header-row .site-branding .site-title a {
   color: var(--body);
@@ -10837,7 +10833,6 @@ h6, .h6,
 .section-title,
 .archive .page-title span {
   display: block;
-  font-weight: 700;
   line-height: 1.4;
   margin: 0 0 clamp(1rem, 1.75vw, 1.25rem);
 }
@@ -11195,7 +11190,6 @@ section[class*=-section] .section-header .section-description {
 .archive .page-header .page-title {
   color: var(--subdued-body);
   font-size: 1rem;
-  font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
 }
