@@ -78,3 +78,11 @@ function wst_add_excerpts_to_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wst_add_excerpts_to_pages' );
+
+
+/**
+ * Excerpt adjustments
+ */
+add_filter('excerpt_length', function ($length) {
+	return 20;
+}, 999);
