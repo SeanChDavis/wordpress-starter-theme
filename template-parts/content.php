@@ -38,8 +38,4 @@
 		?>
 	</div>
 
-	<footer class="entry-footer">
-		<?php wst_entry_footer(); ?>
-	</footer>
-
 </article>
