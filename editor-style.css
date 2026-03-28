@@ -10083,119 +10083,6 @@ html {
   overflow-wrap: break-word;
 }
 
-.button,
-button,
-input[type=submit],
-.wp-block-button__link,
-.wp-block-file__button,
-.wp-block-search__button {
-  background-color: var(--action);
-  border: 0;
-  border-radius: 50px;
-  color: var(--white);
-  display: inline-block;
-  padding: 0.53em 1.7em;
-  font-size: 0.88rem;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.button:active, .button:focus, .button:hover,
-button:active,
-button:focus,
-button:hover,
-input[type=submit]:active,
-input[type=submit]:focus,
-input[type=submit]:hover,
-.wp-block-button__link:active,
-.wp-block-button__link:focus,
-.wp-block-button__link:hover,
-.wp-block-file__button:active,
-.wp-block-file__button:focus,
-.wp-block-file__button:hover,
-.wp-block-search__button:active,
-.wp-block-search__button:focus,
-.wp-block-search__button:hover {
-  color: var(--white);
-  cursor: pointer;
-  opacity: 0.8;
-}
-.button.outline,
-button.outline,
-input[type=submit].outline,
-.wp-block-button__link.outline,
-.wp-block-file__button.outline,
-.wp-block-search__button.outline {
-  background-color: transparent;
-  border: 2px solid var(--action);
-  color: var(--action);
-  padding: calc(0.53em - 2px) calc(1.7em - 2px);
-}
-.button.outline:active, .button.outline:focus, .button.outline:hover,
-button.outline:active,
-button.outline:focus,
-button.outline:hover,
-input[type=submit].outline:active,
-input[type=submit].outline:focus,
-input[type=submit].outline:hover,
-.wp-block-button__link.outline:active,
-.wp-block-button__link.outline:focus,
-.wp-block-button__link.outline:hover,
-.wp-block-file__button.outline:active,
-.wp-block-file__button.outline:focus,
-.wp-block-file__button.outline:hover,
-.wp-block-search__button.outline:active,
-.wp-block-search__button.outline:focus,
-.wp-block-search__button.outline:hover {
-  background-color: var(--action);
-  color: var(--white);
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.wp-block-button.is-style-outline .wp-element-button {
-  background-color: transparent;
-  border: 2px solid var(--action);
-  color: var(--action);
-  padding: calc(0.53em - 2px) calc(1.7em - 2px);
-}
-.wp-block-button.is-style-outline .wp-element-button:active, .wp-block-button.is-style-outline .wp-element-button:focus, .wp-block-button.is-style-outline .wp-element-button:hover {
-  background-color: var(--action);
-  border-color: transparent;
-  color: var(--white);
-  cursor: pointer;
-}
-
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=search],
-input[type=password],
-textarea,
-select {
-  border: 0;
-  border-radius: 2px;
-  box-shadow: 0 0 0 2px inset var(--subdued-body);
-  box-sizing: border-box;
-  padding: 0.53em;
-  width: 100%;
-}
-input[type=text]:active, input[type=text]:focus,
-input[type=email]:active,
-input[type=email]:focus,
-input[type=url]:active,
-input[type=url]:focus,
-input[type=search]:active,
-input[type=search]:focus,
-input[type=password]:active,
-input[type=password]:focus,
-textarea:active,
-textarea:focus,
-select:active,
-select:focus {
-  box-shadow: 0 0 0 2px inset var(--action);
-  outline: 0;
-}
-
 /**
  * Core block styles - both front-end and editor
  */
@@ -10452,8 +10339,41 @@ body .wp-block-group.is-layout-constrained.page-header > .wp-block-group__inner-
 body .wp-block-search .wp-block-search__input {
   width: unset;
 }
-body .wp-block-button .wp-block-button__link {
+body .wp-block-button__link,
+body .wp-block-file__button,
+body .wp-block-search__button {
   background-color: var(--action);
+  border: 0;
+  border-radius: 50px;
+  color: var(--white);
+  display: inline-block;
+  padding: 0.53em 1.7em;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body .wp-block-button__link:active, body .wp-block-button__link:focus, body .wp-block-button__link:hover,
+body .wp-block-file__button:active,
+body .wp-block-file__button:focus,
+body .wp-block-file__button:hover,
+body .wp-block-search__button:active,
+body .wp-block-search__button:focus,
+body .wp-block-search__button:hover {
+  color: var(--white);
+  cursor: pointer;
+  opacity: 0.8;
+}
+body .wp-block-button.is-style-outline .wp-element-button {
+  background-color: transparent;
+  border: 2px solid var(--action);
+  color: var(--action);
+  padding: calc(0.53em - 2px) calc(1.7em - 2px);
+}
+body .wp-block-button.is-style-outline .wp-element-button:active, body .wp-block-button.is-style-outline .wp-element-button:focus, body .wp-block-button.is-style-outline .wp-element-button:hover {
+  background-color: var(--action);
+  border-color: transparent;
+  color: var(--white);
+  cursor: pointer;
 }
 body h1, body .h1,
 body h2, body .h2 {

@@ -12,7 +12,6 @@
 
 // Keep some front-end styles consistent in editor
 @import "_typography";
-@import "_forms";
 @import "_blocks";
 
 /**
@@ -71,10 +70,47 @@ body {
 	}
 
 	/* Core block: Button */
+	.wp-block-button__link,
+	.wp-block-file__button,
+	.wp-block-search__button {
+		background-color: var(--action);
+		border: 0;
+		border-radius: 50px;
+		color: var(--white);
+		display: inline-block;
+		padding: .53em 1.7em;
+		font-size: $font-size-small;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: var(--white);
+			cursor: pointer;
+			opacity: .8;
+		}
+	}
+
 	.wp-block-button {
 
-		.wp-block-button__link {
-			background-color: var(--action);
+		&.is-style-outline {
+
+			.wp-element-button {
+				background-color: transparent;
+				border: 2px solid var(--action);
+				color: var(--action);
+				padding: calc( .53em - 2px ) calc( 1.7em - 2px);
+
+				&:active,
+				&:focus,
+				&:hover {
+					background-color: var(--action);
+					border-color: transparent;
+					color: var(--white);
+					cursor: pointer;
+				}
+			}
 		}
 	}
 
