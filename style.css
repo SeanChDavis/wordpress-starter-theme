@@ -10319,7 +10319,6 @@ progress {
 .fat-footer-section .single-col .menu .menu-item a {
   color: var(--body);
   display: block;
-  font-family: "Cal Sans", sans-serif;
   line-height: 1;
   padding: 7px 0;
   text-decoration: none;
@@ -10737,7 +10736,6 @@ select:focus {
 }
 #footer-menu .menu-item a {
   color: var(--subdued-body);
-  font-family: "Cal Sans", sans-serif;
   line-height: 1;
   text-decoration: none;
 }
