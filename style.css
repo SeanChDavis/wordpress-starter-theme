@@ -10474,6 +10474,9 @@ select:focus {
 #masthead .site-header-row .site-branding .custom-logo-link .custom-logo {
   max-width: 120px;
 }
+#masthead .site-header-row .site-branding .site-title {
+  font-family: "Cal Sans", sans-serif;
+}
 #masthead .site-header-row .site-branding .site-title a {
   color: var(--body);
   text-decoration: none;
