@@ -102,7 +102,8 @@ add_action( 'widgets_init', 'wst_widgets_init' );
 
 // Enqueue scripts and styles.
 function wst_scripts() {
-	wp_enqueue_style( 'wst-style', get_stylesheet_uri(), array(), filemtime( get_theme_file_path( 'style.css' ) ) );
+	wp_enqueue_style( 'wst-google-fonts', 'https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap', array(), null );
+	wp_enqueue_style( 'wst-style', get_stylesheet_uri(), array( 'wst-google-fonts' ), filemtime( get_theme_file_path( 'style.css' ) ) );
 	wp_enqueue_script( 'wst-navigation', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), filemtime( get_theme_file_path( 'assets/js/scripts.min.js' ) ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

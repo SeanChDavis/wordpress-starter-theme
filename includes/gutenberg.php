@@ -10,6 +10,7 @@
  */
 function wst_editor_styles() {
 
+	add_editor_style( 'https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap' );
 	add_editor_style();
 	wp_enqueue_style( 'wst-editor-styles', get_theme_file_uri( 'editor-style.css' ), false, filemtime( get_theme_file_path( 'editor-style.css' ) ), 'all' );
 

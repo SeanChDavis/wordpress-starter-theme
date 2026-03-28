@@ -11512,6 +11512,11 @@ html {
   overflow-wrap: break-word;
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Cal Sans", sans-serif;
+}
+
 /* Make sure final color adjustments come last */
 :root {
   --white: #fff;
