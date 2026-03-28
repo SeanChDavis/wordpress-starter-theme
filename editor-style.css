@@ -10083,11 +10083,6 @@ html {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Cal Sans", sans-serif;
-}
-
 /**
  * Core block styles - both front-end and editor
  */
@@ -10352,8 +10347,9 @@ body .wp-block-search__button {
   border-radius: 50px;
   color: var(--white);
   display: inline-block;
-  padding: 0.53em 1.7em;
+  font-family: "Cal Sans", sans-serif;
   font-size: 0.88rem;
+  padding: 0.53em 1.7em;
   text-transform: uppercase;
   text-decoration: none;
 }

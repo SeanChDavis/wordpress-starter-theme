@@ -9,8 +9,9 @@ input[type="submit"],
 	border-radius: 50px;
 	color: var(--white);
 	display: inline-block;
-	padding: .53em 1.7em;
+	font-family: $font-heading;
 	font-size: $font-size-small;
+	padding: .53em 1.7em;
 	text-transform: uppercase;
 	text-decoration: none;
 

@@ -10348,8 +10348,9 @@ input[type=submit],
   border-radius: 50px;
   color: var(--white);
   display: inline-block;
-  padding: 0.53em 1.7em;
+  font-family: "Cal Sans", sans-serif;
   font-size: 0.88rem;
+  padding: 0.53em 1.7em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -10834,6 +10835,7 @@ h6, .h6,
 .section-title,
 .archive .page-title span {
   display: block;
+  font-family: "Cal Sans", sans-serif;
   line-height: 1.4;
   margin: 0 0 clamp(1rem, 1.75vw, 1.25rem);
 }
@@ -11510,11 +11512,6 @@ html {
   font-size: 18px;
   line-height: 1.6;
   overflow-wrap: break-word;
-}
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Cal Sans", sans-serif;
 }
 
 /* Make sure final color adjustments come last */
