@@ -11,7 +11,7 @@ This theme uses [Node.js](https://nodejs.org/en/) and [Grunt](https://gruntjs.co
 1. Install [Node.js](https://nodejs.org/en/) on your machine if you haven't already.
 2. Install and activate the theme in WordPress.
 3. Perform a search and replace for `wst` (lowercase) and `WST` (uppercase) to replace with your own theme slug and prefix.
-4. Manually open the `assets/css/src/style.scss` file and update the theme name, author, and other information as needed.
+4. Manually open the `assets/css/src/styles.scss` file and update the theme name, author, and other information as needed.
 5. Run `npm install` in the theme root directory to install dependencies.
 6. Run `grunt watch` to automatically compile Sass, minify CSS and JS while working on the theme styles and scripts.
 7. Run `grunt pot` to update the .pot file.
@@ -84,6 +84,12 @@ Note: All vertical padding added to `.container` is adjusted at breakpoints to r
 
 Note: Everything mentioned above applies to both `.container` and `.container-{breakpoint}` classes.
 
+### Block Patterns
+
+The theme includes a set of starter block patterns registered under the **WST Page Sections & Elements** category in the Block Editor. These patterns are designed to work with the Page Sections template and the container sizing system described above, giving you a head start on common page layouts without building from scratch.
+
+Patterns can be inserted from the Block Editor's pattern browser under the **WST Page Sections & Elements** category.
+
 ### Block Editor (Gutenberg) Page Sections
 
 The above HTML structure is only achievable when you are the HTML author. However, the theme includes a style system which allows you to place a **Group** block into the *Page Sections* page template and the default structure of the block will inherit the page section style. No classes need to be added to the block for this to work. The Group block simply needs to:
@@ -112,44 +118,36 @@ This results in the following visual output at the top of this sample page:
 
 ![WordPress Starter Theme - Sample Page Screenshot](https://user-images.githubusercontent.com/2359131/232828083-56e2073f-e2be-48ce-b73f-9802e4919a76.png)
 
-This is a dynamic page header that can be customized in several ways and across multiple templates. The `get_template_part()` call accepts arguments so that you can customize the title and description for each page. For example, the following code displays the post title and excerpt (if it exists) on a single blog post:
+This is a dynamic page header that can be customized in several ways and across multiple templates. The `get_template_part()` call accepts arguments so that you can customize the title and description for each page.
+
+For standard pages and posts, the theme provides a helper function — `wst_page_header_args( $post_id = null )` — that assembles the title and description automatically, including ACF field overrides if the plugin is active. You can use it like this:
 
 ```php
+get_template_part( 'template-parts/section', 'page-header', wst_page_header_args() );
+```
+
+Pass a post ID when calling from outside the loop:
+
+```php
+get_template_part( 'template-parts/section', 'page-header', wst_page_header_args( $post_id ) );
+```
+
+Under the hood, `wst_page_header_args()` is doing this — which gives you a model for building custom args when you need something different:
+
+```php
+// For a single post or page:
 get_template_part( 'template-parts/section', 'page-header', array(
 	'title' => get_the_title(),
 	'description' => has_excerpt() ? get_the_excerpt() : '',
 ) );
 ```
 
-However, an archive page has slightly different needs:
+Archive pages need different functions entirely, so they pass args directly rather than using the helper:
 
 ```php
 get_template_part( 'template-parts/section', 'page-header', array(
 	'title' => get_the_archive_title(),
 	'description' => get_the_archive_description(),
-) );
-```
-
-How about the blog home template (home.php)? It should display the page title and excerpt, or perhaps a custom title and description from Advanced Custom Fields if they exist: 
-
-```php
-$title = get_the_title( get_option( 'page_for_posts' ) );
-$description = get_the_excerpt( get_option( 'page_for_posts' ) );
-
-if ( class_exists( 'acf' ) ) {
-
-	if ( get_field( 'page_header_title', get_option( 'page_for_posts' ) ) ) {
-		$title = get_field( 'page_header_title', get_option( 'page_for_posts' ) );
-	}
-
-	if ( get_field( 'page_header_description', get_option( 'page_for_posts' ) ) ) {
-		$description = get_field( 'page_header_description', get_option( 'page_for_posts' ) );
-	}
-}
-
-get_template_part( 'template-parts/section', 'page-header', array(
-	'title' => $title,
-	'description' => $description,
 ) );
 ```
 
@@ -185,7 +183,7 @@ On site **pages** that are editable from the WordPress dashboard, you'll see a n
 
 ## Theme Issues
 
-If you encounter any issues with the theme, please [open an issue](https://github.com/SeanTOSCD/wordpress-starter-theme/issues). Please include as much information as possible, including:
+If you encounter any issues with the theme, please [open an issue](https://github.com/SeanChDavis/wordpress-starter-theme/issues). Please include as much information as possible, including:
 
 - WordPress version
 - PHP version
