@@ -10071,6 +10071,10 @@ body {
  * Represents: class="container no-vertical-spacing"
  */
 /**
+ * Applies all section container size variants to block inner containers.
+ * Used in both the front-end Page Sections template and the block editor.
+ */
+/**
  * Uniformly reduces font size of headings for tight areas
  */
 html {
@@ -10088,7 +10092,7 @@ input[type=submit],
   background-color: var(--action);
   border: 0;
   border-radius: 50px;
-  color: #fff;
+  color: var(--white);
   display: inline-block;
   padding: 0.53em 1.7em;
   font-size: 0.88rem;
@@ -10111,7 +10115,7 @@ input[type=submit]:hover,
 .wp-block-search__button:active,
 .wp-block-search__button:focus,
 .wp-block-search__button:hover {
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   opacity: 0.8;
 }
@@ -10143,7 +10147,7 @@ input[type=submit].outline:hover,
 .wp-block-search__button.outline:focus,
 .wp-block-search__button.outline:hover {
   background-color: var(--action);
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   opacity: 0.8;
 }
@@ -10157,7 +10161,7 @@ input[type=submit].outline:hover,
 .wp-block-button.is-style-outline .wp-element-button:active, .wp-block-button.is-style-outline .wp-element-button:focus, .wp-block-button.is-style-outline .wp-element-button:hover {
   background-color: var(--action);
   border-color: transparent;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -10343,12 +10347,6 @@ body .edit-post-visual-editor__post-title-wrapper {
 }
 body .wp-block-post-content {
   /* Top-level blocks in the post content */
-}
-body .wp-block-post-content > [class*=wp-block-] {
-  /* Layout related top-level blocks get Bootstrap .container styles */
-  /**
-   * Vertical padding header classes added to top-level blocks
-   */
 }
 body .wp-block-post-content > [class*=wp-block-] > [class*=__inner-container] {
   padding-left: clamp(1.5rem, 2.6vw, 2rem);

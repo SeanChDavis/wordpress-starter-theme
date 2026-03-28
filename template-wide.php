@@ -7,24 +7,7 @@
 
 get_header();
 
-$title = get_the_title();
-$description = has_excerpt() ? get_the_excerpt() : '';
-
-if ( class_exists( 'acf' ) ) {
-
-	if ( get_field( 'page_header_title' ) ) {
-		$title = get_field( 'page_header_title' );
-	}
-
-	if ( get_field( 'page_header_description' ) ) {
-		$description = get_field( 'page_header_description' );
-	}
-}
-
-get_template_part( 'template-parts/section', 'page-header', array(
-	'title' => $title,
-	'description' => $description,
-) );
+get_template_part( 'template-parts/section', 'page-header', wst_page_header_args() );
 ?>
 
 	<main id="content" class="site-main">

@@ -100,7 +100,7 @@
 
 						/* All levels */
 						a {
-							font-size: .83rem;
+							font-size: $font-size-xsmall;
 							line-height: 1.3;
 						}
 
@@ -204,7 +204,7 @@
 					}
 
 					& > .sub-menu {
-						background-color: #fff;
+						background-color: var(--white);
 						border: 1px solid var(--lightest);
 						display: none;
 						padding: 7px 1.2rem;
@@ -254,7 +254,7 @@
 	// Mobile menu styles
 	&.toggled {
 		background-color: var(--darkest);
-		height: calc( 100vh - 46px );
+		height: calc( 100vh - #{$wp-admin-bar-height-mobile} );
 		padding: 2rem;
 		position: absolute;
 		right: 0;
@@ -263,7 +263,7 @@
 		z-index: 999;
 
 		@media all and (min-width: 783px) {
-			height: calc( 100vh - 32px );
+			height: calc( 100vh - #{$wp-admin-bar-height-desktop} );
 		}
 
 		.menu-toggle {
@@ -272,7 +272,7 @@
 
 		.close-menu {
 			display: inline-block;
-			font-size: .83rem;
+			font-size: $font-size-xsmall;
 			position: relative;
 			text-align: right;
 			text-decoration: none;
@@ -445,7 +445,7 @@
 		.nav-subtitle {
 			color: var(--body);
 			display: block;
-			font-size: .88rem;
+			font-size: $font-size-small;
 			font-weight: 700;
 
 			&:active,
@@ -516,10 +516,10 @@
 	#site-navigation {
 
 		&.toggled {
-			top: 46px;
+			top: $wp-admin-bar-height-mobile;
 
 			@media all and (min-width: 783px) {
-				top: 32px;
+				top: $wp-admin-bar-height-desktop;
 			}
 		}
 	}

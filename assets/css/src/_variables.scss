@@ -3,3 +3,11 @@
  *
  * By default, the theme only uses CSS variables.
  */
+
+// UI font sizes
+$font-size-small:  .88rem; // captions, labels, secondary UI
+$font-size-xsmall: .83rem; // meta text, timestamps, fine print
+
+// WordPress admin bar heights (used for mobile nav offset)
+$wp-admin-bar-height-mobile:  46px;
+$wp-admin-bar-height-desktop: 32px;

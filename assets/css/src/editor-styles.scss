@@ -36,51 +36,7 @@ body {
 
 		/* Top-level blocks in the post content */
 		& > [class*="wp-block-"] {
-
-			/* Layout related top-level blocks get Bootstrap .container styles */
-			& > [class*="__inner-container"] {
-				@include section-container;
-			}
-
-			/**
-			 * Vertical padding header classes added to top-level blocks
-			 */
-			&.tiny {
-
-				& > [class*="__inner-container"] {
-					@include section-container__tiny;
-				}
-			}
-			&.small {
-
-				& > [class*="__inner-container"] {
-					@include section-container__small;
-				}
-			}
-			&.medium {
-
-				& > [class*="__inner-container"] {
-					@include section-container__medium;
-				}
-			}
-			&.large {
-
-				& > [class*="__inner-container"] {
-					@include section-container__large;
-				}
-			}
-			&.huge {
-
-				& > [class*="__inner-container"] {
-					@include section-container__huge;
-				}
-			}
-			&.no-vertical-spacing {
-
-				& > [class*="__inner-container"] {
-					@include section-container__no-vertical-spacing;
-				}
-			}
+			@include block-section-containers;
 		}
 	}
 

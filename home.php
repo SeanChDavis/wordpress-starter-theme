@@ -7,32 +7,16 @@ get_header();
 
 $page_for_posts = get_option( 'page_for_posts' );
 
-// Default page header when the blog page is not set and the blog page is the front page
-$title = sprintf( __( 'Welcome to %s', 'wst' ), get_bloginfo( 'name' ) );
-$description = get_bloginfo( 'description' );
+// If a blog page is set, use its title/description (with ACF overrides).
+// Otherwise fall back to the site name and tagline.
+$header_args = ! empty( $page_for_posts )
+	? wst_page_header_args( $page_for_posts )
+	: array(
+		'title'       => sprintf( __( 'Welcome to %s', 'wst' ), get_bloginfo( 'name' ) ),
+		'description' => get_bloginfo( 'description' ),
+	);
 
-// If the blog page is set, use the title and description of the page
-if ( ! empty( $page_for_posts ) ) {
-    $title = get_the_title( $page_for_posts );
-    $description = get_the_excerpt( $page_for_posts );
-}
-
-// If ACF is installed, use the title and description from the page header
-if ( class_exists( 'acf' ) ) {
-
-	if ( get_field( 'page_header_title', get_option( 'page_for_posts' ) ) ) {
-		$title = get_field( 'page_header_title', get_option( 'page_for_posts' ) );
-	}
-
-	if ( get_field( 'page_header_description', get_option( 'page_for_posts' ) ) ) {
-		$description = get_field( 'page_header_description', get_option( 'page_for_posts' ) );
-	}
-}
-
-get_template_part( 'template-parts/section', 'page-header', array(
-	'title' => $title,
-	'description' => $description,
-) );
+get_template_part( 'template-parts/section', 'page-header', $header_args );
 ?>
 
 	<main id="content" class="site-main">

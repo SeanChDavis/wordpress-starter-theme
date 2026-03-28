@@ -93,6 +93,41 @@
 }
 
 /**
+ * Applies all section container size variants to block inner containers.
+ * Used in both the front-end Page Sections template and the block editor.
+ */
+@mixin block-section-containers {
+
+	& > [class*="__inner-container"] {
+		@include section-container;
+	}
+
+	&.tiny > [class*="__inner-container"] {
+		@include section-container__tiny;
+	}
+
+	&.small > [class*="__inner-container"] {
+		@include section-container__small;
+	}
+
+	&.medium > [class*="__inner-container"] {
+		@include section-container__medium;
+	}
+
+	&.large > [class*="__inner-container"] {
+		@include section-container__large;
+	}
+
+	&.huge > [class*="__inner-container"] {
+		@include section-container__huge;
+	}
+
+	&.no-vertical-spacing > [class*="__inner-container"] {
+		@include section-container__no-vertical-spacing;
+	}
+}
+
+/**
  * Uniformly reduces font size of headings for tight areas
  */
 @mixin heading-font-reduced {

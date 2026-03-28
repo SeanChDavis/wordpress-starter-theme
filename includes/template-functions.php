@@ -78,3 +78,32 @@ function wst_add_excerpts_to_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'wst_add_excerpts_to_pages' );
+
+/**
+ * Returns page header args (title and description) for use with the
+ * section-page-header template part. Applies ACF field overrides when available.
+ *
+ * @param int|null $post_id Optional post ID. Defaults to current post in the loop.
+ * @return array { title: string, description: string }
+ */
+function wst_page_header_args( $post_id = null ) {
+	$title       = get_the_title( $post_id );
+	$description = has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : '';
+
+	if ( class_exists( 'acf' ) ) {
+		$acf_title = get_field( 'page_header_title', $post_id );
+		if ( $acf_title ) {
+			$title = $acf_title;
+		}
+
+		$acf_description = get_field( 'page_header_description', $post_id );
+		if ( $acf_description ) {
+			$description = $acf_description;
+		}
+	}
+
+	return array(
+		'title'       => $title,
+		'description' => $description,
+	);
+}

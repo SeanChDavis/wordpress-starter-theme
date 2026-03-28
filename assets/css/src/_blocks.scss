@@ -8,7 +8,7 @@
 
 	cite {
 		color: var(--subdued-body);
-		font-size: .88rem;
+		font-size: $font-size-small;
 
 		&:before {
 			content: '— ';
@@ -30,7 +30,7 @@
 
 		cite {
 			color: var(--subdued-body);
-			font-size: .88rem;
+			font-size: $font-size-small;
 
 			&:before {
 				content: '— ';
@@ -43,7 +43,7 @@
 .wp-block-code-editor,
 .wp-block-preformatted,
 .wp-block-preformatted-editor {
-	font-size: .88rem;
+	font-size: $font-size-small;
 }
 
 .wp-block-table,
