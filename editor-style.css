@@ -10108,8 +10108,8 @@ html {
 }
 .wp-block-pullquote blockquote p,
 .wp-block-pullquote-editor blockquote p {
+  font-family: "Cal Sans", sans-serif;
   font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 600;
 }
 .wp-block-pullquote blockquote cite,
 .wp-block-pullquote-editor blockquote cite {

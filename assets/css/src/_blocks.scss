@@ -24,8 +24,8 @@
 	blockquote {
 
 		p {
+			font-family: $font-heading;
 			font-size: clamp(1.15rem, 2vw, 1.5rem);
-			font-weight: 600;
 		}
 
 		cite {
