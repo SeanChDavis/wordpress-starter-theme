@@ -19,12 +19,12 @@ if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
 <section class="page-header background-lightest">
 	<div class="container">
 		<?php if ( ! empty( $title ) ) { ?>
-			<h1 class="page-title"><?php echo $title; ?></h1>
+			<h1 class="page-title"><?php echo wp_kses_post( $title ); ?></h1>
 		<?php } ?>
 
 		<?php if ( ! empty( $description ) ) { ?>
 			<div class="page-description">
-				<?php echo wpautop( $description ); ?>
+				<?php echo wp_kses_post( wpautop( $description ) ); ?>
 			</div>
 		<?php } ?>
 

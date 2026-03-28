@@ -10655,7 +10655,7 @@ select:focus {
   cursor: pointer;
 }
 #site-navigation.toggled #primary-menu {
-  background-color: var(--transulent-dark);
+  background-color: var(--translucent-dark);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10675,7 +10675,7 @@ select:focus {
   text-align: left;
 }
 #site-navigation.toggled #primary-menu > .menu-item > a {
-  border-bottom: 1px solid var(--transulent-dark);
+  border-bottom: 1px solid var(--translucent-dark);
   display: block;
   padding: 1rem;
 }
@@ -10687,7 +10687,7 @@ select:focus {
 }
 #site-navigation.toggled #primary-menu > .menu-item.menu-item-has-children > .sub-menu {
   background-color: transparent;
-  border-bottom: 1px solid var(--transulent-dark);
+  border-bottom: 1px solid var(--translucent-dark);
   display: none;
   margin: 6px 0 0 1rem;
   padding: 0 0 6px 0;
@@ -11525,8 +11525,8 @@ html {
 /* Make sure final color adjustments come last */
 :root {
   --white: #fff;
-  --transulent-light: rgba(255,255,255,.15);
-  --transulent-dark: rgba(0,0,0,.15);
+  --translucent-light: rgba(255,255,255,.15);
+  --translucent-dark: rgba(0,0,0,.15);
 }
 
 body {

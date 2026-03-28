@@ -138,7 +138,7 @@ function wst_customizer_head_styles() {
             --lightest: <?php echo get_theme_mod( 'lightest_color', '#f7f9fc' ); ?>;
             --darkest: <?php echo get_theme_mod( 'darkest_color', '#002754' ); ?>;
             --action: <?php echo get_theme_mod( 'action_color', '#00bca9' ); ?>;
-            --subdued-action: <?php echo get_theme_mod( 'body_color', '#002959' ); ?>;
+            --subdued-action: <?php echo get_theme_mod( 'darkest_color', '#002754' ); ?>;
 		}
     </style>
 	<?php

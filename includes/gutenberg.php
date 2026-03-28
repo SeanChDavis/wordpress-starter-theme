@@ -21,7 +21,7 @@ function wst_editor_styles() {
             --lightest: ' . get_theme_mod( 'lightest_color', '#f7f9fc' ) . ';
             --darkest: ' . get_theme_mod( 'darkest_color', '#002754' ) . ';
             --action: ' . get_theme_mod( 'action_color', '#00bca9' ) . ';
-            --subdued-action: ' . get_theme_mod( 'subdued_action_color', '#002754' ) . ';
+            --subdued-action: ' . get_theme_mod( 'darkest_color', '#002754' ) . ';
         }';
 
 	wp_add_inline_style( 'wst-editor-styles', $custom_colors );
