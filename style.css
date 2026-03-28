@@ -10736,6 +10736,7 @@ select:focus {
 }
 #footer-menu .menu-item a {
   color: var(--subdued-body);
+  font-family: "Cal Sans", sans-serif;
   line-height: 1;
   text-decoration: none;
 }
