@@ -10836,12 +10836,15 @@ h6, .h6,
 
 h1, .h1,
 h2, .h2,
-.page-title,
 .page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
 .page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
-.page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child,
-.archive .page-title span {
+.page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child {
   font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.page-title,
+.archive .page-title span {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 h3, .h3,
