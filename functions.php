@@ -3,8 +3,6 @@
  * Theme functions and definitions
  */
 
-const THEME_VERSION = '1.1';
-
 define( 'THEME_URI', get_home_url() );
 define( 'THEME_NAME', get_bloginfo( 'name' ) );
 define( 'THEME_TEMPLATE_DIR', get_template_directory() );
@@ -104,8 +102,8 @@ add_action( 'widgets_init', 'wst_widgets_init' );
 
 // Enqueue scripts and styles.
 function wst_scripts() {
-	wp_enqueue_style( 'wst-style', get_stylesheet_uri(), array(), THEME_VERSION );
-	wp_enqueue_script( 'wst-navigation', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), THEME_VERSION, true );
+	wp_enqueue_style( 'wst-style', get_stylesheet_uri(), array(), filemtime( get_theme_file_path( 'style.css' ) ) );
+	wp_enqueue_script( 'wst-navigation', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), filemtime( get_theme_file_path( 'assets/js/scripts.min.js' ) ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

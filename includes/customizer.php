@@ -151,7 +151,10 @@ add_action( 'wp_head', 'wst_customizer_head_styles' );
  * @return void
  */
 function wst_customize_controls_enqueue_scripts() {
-	wp_enqueue_script( 'wst-custom-customizer', get_template_directory_uri() . '/assets/js/custom-customizer.js', array( 'jquery', 'customize-controls' ), THEME_VERSION, true );
+	$path = get_theme_file_path( 'assets/js/custom-customizer.js' );
+	if ( file_exists( $path ) ) {
+		wp_enqueue_script( 'wst-custom-customizer', get_template_directory_uri() . '/assets/js/custom-customizer.js', array( 'jquery', 'customize-controls' ), filemtime( $path ), true );
+	}
 }
 add_action( 'customize_controls_enqueue_scripts', 'wst_customize_controls_enqueue_scripts' );
 
@@ -159,6 +162,6 @@ add_action( 'customize_controls_enqueue_scripts', 'wst_customize_controls_enqueu
  * Bind JS handlers for Customizer controls
  */
 function wst_customize_preview_init() {
-	wp_enqueue_script( 'wst-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), THEME_VERSION, true );
+	wp_enqueue_script( 'wst-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), filemtime( get_theme_file_path( 'assets/js/customizer.js' ) ), true );
 }
 add_action( 'customize_preview_init', 'wst_customize_preview_init' );

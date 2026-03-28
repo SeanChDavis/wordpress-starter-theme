@@ -11,7 +11,7 @@
 function wst_editor_styles() {
 
 	add_editor_style();
-	wp_enqueue_style( 'wst-editor-styles', get_theme_file_uri( 'editor-styles.css' ), false, THEME_VERSION, 'all' );
+	wp_enqueue_style( 'wst-editor-styles', get_theme_file_uri( 'editor-style.css' ), false, filemtime( get_theme_file_path( 'editor-style.css' ) ), 'all' );
 
 	// Make sure the custom colors are added to the editor
 	$custom_colors = '

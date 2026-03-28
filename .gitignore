@@ -2,3 +2,5 @@ node_modules/
 .idea/
 .sass-cache/
 .DS_Store
+CLAUDE.md
+.claude/
