@@ -33,6 +33,7 @@
 
 			a {
 				color: var(--body);
+				font-family: $font-heading;
 				font-size: .9rem;
 				font-weight: 600;
 				line-height: 1;
@@ -408,6 +409,7 @@
 
 		a {
 			color: var(--subdued-body);
+			font-family: $font-heading;
 			font-weight: 400;
 			line-height: 1;
 			text-decoration: none;

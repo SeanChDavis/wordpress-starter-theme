@@ -10319,7 +10319,7 @@ progress {
 .fat-footer-section .single-col .menu .menu-item a {
   color: var(--body);
   display: block;
-  font-weight: 600;
+  font-family: "Cal Sans", sans-serif;
   line-height: 1;
   padding: 7px 0;
   text-decoration: none;
@@ -10514,6 +10514,7 @@ select:focus {
 }
 #site-navigation #primary-menu .menu-item a {
   color: var(--body);
+  font-family: "Cal Sans", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1;
@@ -10737,6 +10738,7 @@ select:focus {
 }
 #footer-menu .menu-item a {
   color: var(--subdued-body);
+  font-family: "Cal Sans", sans-serif;
   font-weight: 400;
   line-height: 1;
   text-decoration: none;
