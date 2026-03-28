@@ -146,19 +146,6 @@ function wst_customizer_head_styles() {
 add_action( 'wp_head', 'wst_customizer_head_styles' );
 
 /**
- * Custom JS for Customizer controls
- *
- * @return void
- */
-function wst_customize_controls_enqueue_scripts() {
-	$path = get_theme_file_path( 'assets/js/custom-customizer.js' );
-	if ( file_exists( $path ) ) {
-		wp_enqueue_script( 'wst-custom-customizer', get_template_directory_uri() . '/assets/js/custom-customizer.js', array( 'jquery', 'customize-controls' ), filemtime( $path ), true );
-	}
-}
-add_action( 'customize_controls_enqueue_scripts', 'wst_customize_controls_enqueue_scripts' );
-
-/**
  * Bind JS handlers for Customizer controls
  */
 function wst_customize_preview_init() {
