@@ -19,7 +19,7 @@ function wst_body_classes( $classes ) {
 
 	// Adds a class of page-{slug} for every page.
 	if ( isset( $post ) ) {
-		$classes[] = 'page-' . $post->post_name;
+		$classes[] = 'page-' . sanitize_html_class( $post->post_name );
 
 		if ( is_front_page() ) {
 			$classes[] = 'page-front';
@@ -27,7 +27,7 @@ function wst_body_classes( $classes ) {
 	}
 
 	// Adds a class of has-post-thumbnail if the page has a featured image.
-	if ( ( is_single() || is_page_template( 'template-narrow.php' ) ) && has_post_thumbnail( $post->ID ) ) {
+	if ( ( is_single() || is_page_template( 'template-narrow.php' ) ) && has_post_thumbnail() ) {
 		$classes[] = 'has-post-thumbnail';
 	}
 
@@ -49,7 +49,7 @@ add_filter( 'body_class', 'wst_body_classes' );
  */
 function wst_posts_only_search( $query ) {
 
-	if ( $query->is_search && ! is_admin() ) {
+	if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
 		$query->set( 'post_type', 'post' );
 		$query->set( 'posts_per_page', 20 );
 	}

@@ -10418,7 +10418,6 @@ input[type=submit].outline:hover,
 input[type=text],
 input[type=email],
 input[type=url],
-input[type=text],
 input[type=search],
 input[type=password],
 textarea,
@@ -10435,8 +10434,6 @@ input[type=email]:active,
 input[type=email]:focus,
 input[type=url]:active,
 input[type=url]:focus,
-input[type=text]:active,
-input[type=text]:focus,
 input[type=search]:active,
 input[type=search]:focus,
 input[type=password]:active,
@@ -11156,13 +11153,6 @@ section[class*=-section] .section-header .section-description {
   }
 }
 
-.page-header.centered {
-  text-align: center;
-}
-.page-header.centered .page-description {
-  margin-left: auto;
-  margin-right: auto;
-}
 .page-header .page-title {
   margin-bottom: 0.75rem;
 }
@@ -11305,10 +11295,6 @@ section[class*=-section] .section-header .section-description {
 .entry-meta a,
 .entry-footer a {
   color: var(--subdued-action);
-}
-
-body * {
-  box-sizing: border-box;
 }
 
 /**

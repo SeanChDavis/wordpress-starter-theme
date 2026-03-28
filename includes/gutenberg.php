@@ -16,12 +16,12 @@ function wst_editor_styles() {
 	// Make sure the custom colors are added to the editor
 	$custom_colors = '
         :root {
-            --body: ' . get_theme_mod( 'body_color', '#002959' ) . ';
-            --subdued-body: ' . get_theme_mod( 'subdued_body_color', '#315b82' ) . ';
-            --lightest: ' . get_theme_mod( 'lightest_color', '#f7f9fc' ) . ';
-            --darkest: ' . get_theme_mod( 'darkest_color', '#002754' ) . ';
-            --action: ' . get_theme_mod( 'action_color', '#00bca9' ) . ';
-            --subdued-action: ' . get_theme_mod( 'darkest_color', '#002754' ) . ';
+            --body: ' . esc_attr( get_theme_mod( 'body_color', '#002959' ) ) . ';
+            --subdued-body: ' . esc_attr( get_theme_mod( 'subdued_body_color', '#315b82' ) ) . ';
+            --lightest: ' . esc_attr( get_theme_mod( 'lightest_color', '#f7f9fc' ) ) . ';
+            --darkest: ' . esc_attr( get_theme_mod( 'darkest_color', '#002754' ) ) . ';
+            --action: ' . esc_attr( get_theme_mod( 'action_color', '#00bca9' ) ) . ';
+            --subdued-action: ' . esc_attr( get_theme_mod( 'darkest_color', '#002754' ) ) . ';
         }';
 
 	wp_add_inline_style( 'wst-editor-styles', $custom_colors );

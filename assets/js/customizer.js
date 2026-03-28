@@ -36,6 +36,7 @@
 	wp.customize( 'darkest_color', function( value ) {
 		value.bind( function( newval ) {
 			$( ':root' ).css( '--darkest', newval );
+			$( ':root' ).css( '--subdued-action', newval );
 		} );
 	} );
 
@@ -43,13 +44,6 @@
 	wp.customize( 'action_color', function( value ) {
 		value.bind( function( newval ) {
 			$( ':root' ).css( '--action', newval );
-		} );
-	} );
-
-	// Subdued Action Color
-	wp.customize( 'subdued_action_color', function( value ) {
-		value.bind( function( newval ) {
-			$( ':root' ).css( '--subdued-action', newval );
 		} );
 	} );
 
