@@ -438,6 +438,7 @@
 
 		a {
 			color: var(--subdued-action);
+			font-family: $font-heading;
 			font-size: .94rem;
 			text-decoration: none;
 		}
@@ -445,8 +446,7 @@
 		.nav-subtitle {
 			color: var(--body);
 			display: block;
-			font-size: $font-size-small;
-			font-weight: 700;
+			font-size: $font-size-xsmall;
 
 			&:active,
 			&:focus,

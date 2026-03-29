@@ -10269,7 +10269,7 @@ progress {
 }
 #colophon .site-copyright a {
   color: var(--body);
-  font-weight: 700;
+  font-family: "Cal Sans", sans-serif;
   text-decoration: none;
 }
 #colophon .site-copyright a:active, #colophon .site-copyright a:focus, #colophon .site-copyright a:hover {
@@ -10762,6 +10762,7 @@ select:focus {
 .nav-links .nav-previous a,
 .nav-links .nav-next a {
   color: var(--subdued-action);
+  font-family: "Cal Sans", sans-serif;
   font-size: 0.94rem;
   text-decoration: none;
 }
@@ -10769,8 +10770,7 @@ select:focus {
 .nav-links .nav-next .nav-subtitle {
   color: var(--body);
   display: block;
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 0.83rem;
 }
 .nav-links .nav-previous .nav-subtitle:active, .nav-links .nav-previous .nav-subtitle:focus, .nav-links .nav-previous .nav-subtitle:hover,
 .nav-links .nav-next .nav-subtitle:active,
@@ -11298,7 +11298,6 @@ section[class*=-section] .section-header .section-description {
 .entry-footer {
   color: var(--subdued-body);
   font-size: 0.83rem;
-  font-weight: 500;
 }
 .entry-meta a,
 .entry-footer a {

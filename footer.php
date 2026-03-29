@@ -27,7 +27,7 @@ get_template_part( 'template-parts/section', 'fat-footer' );
 				<div class="site-info-col col-12 col-lg-6 order-lg-1">
 					<div class="site-info">
 						<?php $home_link = '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a>'; ?>
-						<span class="site-copyright"><?php echo '&copy; ' . $home_link . ' ' . date( 'Y' ); ?></span>
+						<span class="site-copyright"><?php echo $home_link . ' &copy; ' . date( 'Y' ); ?></span>
 						<?php if ( ! empty( get_bloginfo( 'description' ) ) ) { ?>
 							<span class="site-description"> - <?php echo esc_html( get_bloginfo( 'description' ) ); ?></span>
 						<?php } ?>
