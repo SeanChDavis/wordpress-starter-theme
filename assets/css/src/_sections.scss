@@ -33,6 +33,10 @@ section[class*="-section"] {
 	.entry-meta {
 		margin-top: 1rem;
 	}
+
+	form.search-form {
+		width: clamp(13rem, 50vw, 18rem);
+	}
 }
 
 .archive,

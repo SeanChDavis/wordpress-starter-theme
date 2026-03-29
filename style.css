@@ -11170,6 +11170,9 @@ section[class*=-section] .section-header .section-description {
 .page-header .entry-meta {
   margin-top: 1rem;
 }
+.page-header form.search-form {
+  width: clamp(13rem, 50vw, 18rem);
+}
 
 .archive .page-header .page-title,
 .search .page-header .page-title {
