@@ -11120,11 +11120,6 @@ table {
 .page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > p {
   max-width: 640px;
 }
-@media all and (min-width: 768px) {
-  .page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > p {
-    font-size: clamp(1rem, 1.65vw, 1.167rem);
-  }
-}
 .page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > p:not(.has-text-color) {
   color: var(--subdued-body);
 }

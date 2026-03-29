@@ -49,10 +49,6 @@
 						& > p {
 							max-width: 640px;
 
-							@media all and (min-width: 768px) {
-								font-size: clamp(1rem, 1.65vw, 1.167rem);
-							}
-
 							&:not(.has-text-color) {
 								color: var(--subdued-body);
 							}
