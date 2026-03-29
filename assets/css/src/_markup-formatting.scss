@@ -6,7 +6,8 @@ h5, .h5,
 h6, .h6,
 .page-title,
 .section-title,
-.archive .page-title span {
+.archive .page-title span,
+.search .page-title span {
 	display: block;
 	font-family: $font-heading;
 	line-height: 1.4;
@@ -24,7 +25,8 @@ h2, .h2,
 h3, .h3,
 .section-title,
 .page-title,
-.archive .page-title span {
+.archive .page-title span,
+.search .page-title span {
 	font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
