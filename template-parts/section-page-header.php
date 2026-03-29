@@ -35,7 +35,7 @@ if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
 		<?php } ?>
 
 		<?php if ( is_search() ) { ?>
-			<div class="search-form mt-5">
+			<div class="search-form mt-4">
 				<?php get_search_form(); ?>
 			</div>
 		<?php } ?>
