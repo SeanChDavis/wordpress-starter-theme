@@ -11171,7 +11171,7 @@ section[class*=-section] .section-header .section-description {
 
 .archive .page-header .page-title {
   color: var(--subdued-body);
-  font-size: 1rem;
+  font-size: 0.88rem;
   line-height: 1;
   text-transform: uppercase;
 }
