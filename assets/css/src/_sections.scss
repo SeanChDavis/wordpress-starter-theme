@@ -18,6 +18,11 @@ section[class*="-section"] {
 
 .page-header {
 
+	.container {
+		padding-bottom: clamp(2rem, 6.45vw, 4rem);
+		padding-top: clamp(2rem, 6.45vw, 4rem);
+	}
+
 	.page-title {
 		margin-bottom: .75rem;
 

@@ -11161,6 +11161,10 @@ section[class*=-section] .section-header .section-description {
   }
 }
 
+.page-header .container {
+  padding-bottom: clamp(2rem, 6.45vw, 4rem);
+  padding-top: clamp(2rem, 6.45vw, 4rem);
+}
 .page-header .page-title {
   margin-bottom: 0.75rem;
 }
