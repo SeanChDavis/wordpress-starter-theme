@@ -10430,6 +10430,7 @@ select {
   border-radius: 2px;
   box-shadow: 0 0 0 2px inset var(--subdued-body);
   box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
   padding: 0.53em;
   width: 100%;
 }
