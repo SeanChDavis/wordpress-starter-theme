@@ -9,13 +9,15 @@ Text Domain: wst
 */
 
 /* Required Bootstrap styles */
-@import "../../../node_modules/bootstrap/scss/bootstrap-reboot";
 @import "../../../node_modules/bootstrap/scss/bootstrap-utilities";
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid";
 
 /* Must be included before other styles */
 @import "_variables";
 @import "_mixins";
+
+/* Browser reset */
+@import "_reset";
 
 /* Global styles */
 @import "_blocks";
