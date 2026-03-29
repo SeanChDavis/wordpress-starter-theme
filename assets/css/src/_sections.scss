@@ -35,7 +35,10 @@ section[class*="-section"] {
 	}
 
 	form.search-form {
-		width: clamp(13rem, 50vw, 18rem);
+
+		.search-field {
+			width: clamp(13rem, 50vw, 18rem);
+		}
 	}
 }
 

@@ -11170,7 +11170,7 @@ section[class*=-section] .section-header .section-description {
 .page-header .entry-meta {
   margin-top: 1rem;
 }
-.page-header form.search-form {
+.page-header form.search-form .search-field {
   width: clamp(13rem, 50vw, 18rem);
 }
 
