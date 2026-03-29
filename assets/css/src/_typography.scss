@@ -5,11 +5,4 @@ html {
 	overflow-wrap: break-word;
 }
 
-// Browsers don't inherit font-family to form elements — force the cascade
-input,
-button,
-textarea,
-select {
-	font-family: inherit;
-}
 

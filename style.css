@@ -9923,6 +9923,10 @@ summary {
   color: var(--action);
 }
 
+label {
+  font-family: "Cal Sans", sans-serif;
+}
+
 .button,
 button,
 input[type=submit],
@@ -11093,13 +11097,6 @@ html {
   font-size: 18px;
   line-height: 1.6;
   overflow-wrap: break-word;
-}
-
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
 }
 
 /* Make sure final color adjustments come last */

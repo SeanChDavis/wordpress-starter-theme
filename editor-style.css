@@ -118,13 +118,6 @@ html {
   overflow-wrap: break-word;
 }
 
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-}
-
 h1, .h1,
 h2, .h2,
 h3, .h3,
