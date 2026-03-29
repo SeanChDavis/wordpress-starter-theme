@@ -10430,7 +10430,6 @@ select {
   border-radius: 2px;
   box-shadow: 0 0 0 2px inset var(--subdued-body);
   box-sizing: border-box;
-  font-family: "Red Hat Display", sans-serif;
   padding: 0.53em;
   width: 100%;
 }
@@ -11506,6 +11505,13 @@ html {
   font-size: 18px;
   line-height: 1.6;
   overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
 }
 
 /* Make sure final color adjustments come last */
