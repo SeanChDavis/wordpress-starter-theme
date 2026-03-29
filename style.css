@@ -11155,11 +11155,6 @@ section[class*=-section] .section-header {
 section[class*=-section] .section-header .section-description {
   color: var(--subdued-body);
 }
-@media all and (min-width: 768px) {
-  section[class*=-section] .section-header .section-description p {
-    font-size: clamp(1rem, 2vw, 1.167rem);
-  }
-}
 
 .page-header .container {
   padding-bottom: clamp(2rem, 6.45vw, 4rem);
@@ -11170,11 +11165,6 @@ section[class*=-section] .section-header .section-description {
 }
 .page-header .page-title:last-child {
   margin-bottom: 0;
-}
-@media all and (min-width: 768px) {
-  .page-header .page-title + p {
-    font-size: clamp(1rem, 2vw, 1.167rem);
-  }
 }
 .page-header .page-description {
   color: var(--subdued-body);
