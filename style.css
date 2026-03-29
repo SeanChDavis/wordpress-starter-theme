@@ -11180,11 +11180,6 @@ section[class*=-section] .section-header .section-description {
   color: var(--subdued-body);
   max-width: 640px;
 }
-@media all and (min-width: 768px) {
-  .page-header .page-description {
-    font-size: clamp(1rem, 2vw, 1.167rem);
-  }
-}
 .page-header .entry-meta {
   margin-top: 1rem;
 }

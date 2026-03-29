@@ -41,10 +41,6 @@ section[class*="-section"] {
 	.page-description {
 		color: var(--subdued-body);
 		max-width: 640px;
-
-		@media all and (min-width: 768px) {
-			font-size: clamp(1rem, 2vw, 1.167rem);
-		}
 	}
 
 	.entry-meta {
