@@ -10,7 +10,7 @@
  */
 function wst_editor_styles() {
 
-	add_editor_style( 'https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap' );
+	add_editor_style( 'https://fonts.googleapis.com/css2?family=Cal+Sans&family=Red+Hat+Display:ital,wght@0,400;0,700;1,400&display=swap' );
 	add_editor_style();
 
 	// Inject CSS custom properties globally so they're available throughout the editor

@@ -11501,6 +11501,7 @@ section[class*=-section] .section-header .section-description {
 }
 
 html {
+  font-family: "Red Hat Display", sans-serif;
   font-size: 18px;
   line-height: 1.6;
   overflow-wrap: break-word;
