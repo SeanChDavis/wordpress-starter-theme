@@ -117,6 +117,173 @@ html {
   overflow-wrap: break-word;
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.page-title,
+.section-title,
+.archive .page-title span,
+.search .page-title span {
+  display: block;
+  font-family: "Cal Sans", sans-serif;
+  line-height: 1.4;
+  margin: 0 0 clamp(1rem, 1.75vw, 1.25rem);
+}
+
+h1, .h1,
+h2, .h2,
+.page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
+.page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
+.page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h3, .h3,
+.section-title,
+.page-title,
+.archive .page-title span,
+.search .page-title span {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+h4, .h4 {
+  font-size: clamp(1.25rem, 5vw, 2.25rem);
+}
+
+h5, .h5,
+h6, .h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: clamp(1.25rem, 2vw, 1.67rem);
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0 0 clamp(1.25rem, 2vw, 1.67rem) 1.25rem;
+  padding-left: 1rem;
+}
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
+}
+ul li ul,
+ul li ol,
+ol li ul,
+ol li ol {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+a {
+  color: var(--action);
+  text-decoration: underline;
+}
+a:active, a:hover, a:focus {
+  color: var(--action);
+  text-decoration: none;
+}
+
+iframe,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figcaption,
+.wp-caption-text {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+q {
+  font-style: italic;
+  font-weight: 500;
+}
+
+pre {
+  background-color: var(--lightest);
+  padding: 1.5rem;
+}
+
+address {
+  margin-bottom: 1.25rem;
+}
+
+table {
+  font-size: 0.88rem;
+}
+
+@media all and (min-width: 768px) {
+  .alignleft {
+    float: left;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .alignright {
+    float: right;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.entry-content:not(.page-sections-content) h1, .entry-content:not(.page-sections-content) .h1,
+.entry-content:not(.page-sections-content) h2, .entry-content:not(.page-sections-content) .h2,
+.comment-content h1,
+.comment-content .h1,
+.comment-content h2,
+.comment-content .h2 {
+  font-size: 2rem;
+}
+.entry-content:not(.page-sections-content) h3, .entry-content:not(.page-sections-content) .h3,
+.comment-content h3,
+.comment-content .h3 {
+  font-size: 1.5rem;
+}
+.entry-content:not(.page-sections-content) h4, .entry-content:not(.page-sections-content) .h4,
+.comment-content h4,
+.comment-content .h4 {
+  color: var(--subdued-body);
+  font-size: 1.25rem;
+}
+.entry-content:not(.page-sections-content) h5, .entry-content:not(.page-sections-content) .h5,
+.entry-content:not(.page-sections-content) h6, .entry-content:not(.page-sections-content) .h6,
+.comment-content h5,
+.comment-content .h5,
+.comment-content h6,
+.comment-content .h6 {
+  font-size: 1rem;
+}
+.entry-content:not(.page-sections-content) h6, .entry-content:not(.page-sections-content) .h6,
+.comment-content h6,
+.comment-content .h6 {
+  color: var(--subdued-body);
+}
+.entry-content:not(.page-sections-content) > [class*=wp-block-]:last-child,
+.comment-content > [class*=wp-block-]:last-child {
+  margin-bottom: 0;
+}
+.entry-content:not(.page-sections-content) figure,
+.entry-content:not(.page-sections-content) img,
+.comment-content figure,
+.comment-content img {
+  max-width: 100%;
+}
+
 /**
  * Core block styles - both front-end and editor
  */
