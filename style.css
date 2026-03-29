@@ -11169,13 +11169,15 @@ section[class*=-section] .section-header .section-description {
   margin-top: 1rem;
 }
 
-.archive .page-header .page-title {
+.archive .page-header .page-title,
+.search .page-header .page-title {
   color: var(--subdued-body);
   font-size: 0.88rem;
   line-height: 1;
   text-transform: uppercase;
 }
-.archive .page-header .page-title span {
+.archive .page-header .page-title span,
+.search .page-header .page-title span {
   color: var(--body);
   line-height: 1.2;
   text-transform: none;
