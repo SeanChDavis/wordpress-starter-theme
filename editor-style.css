@@ -10344,7 +10344,7 @@ body .wp-block-file__button,
 body .wp-block-search__button {
   background-color: var(--action);
   border: 0;
-  border-radius: 50px;
+  border-radius: 5px;
   color: var(--white);
   display: inline-block;
   font-family: "Cal Sans", sans-serif;
