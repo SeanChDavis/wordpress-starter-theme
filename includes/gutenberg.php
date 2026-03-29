@@ -12,9 +12,8 @@ function wst_editor_styles() {
 
 	add_editor_style( 'https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap' );
 	add_editor_style();
-	wp_enqueue_style( 'wst-editor-styles', get_theme_file_uri( 'editor-style.css' ), false, filemtime( get_theme_file_path( 'editor-style.css' ) ), 'all' );
 
-	// Make sure the custom colors are added to the editor
+	// Inject CSS custom properties globally so they're available throughout the editor
 	$custom_colors = '
         :root {
             --body: ' . esc_attr( get_theme_mod( 'body_color', '#002959' ) ) . ';
@@ -25,7 +24,7 @@ function wst_editor_styles() {
             --subdued-action: ' . esc_attr( get_theme_mod( 'darkest_color', '#002754' ) ) . ';
         }';
 
-	wp_add_inline_style( 'wst-editor-styles', $custom_colors );
+	wp_add_inline_style( 'wp-edit-post', $custom_colors );
 }
 add_action( 'enqueue_block_editor_assets', 'wst_editor_styles' );
 
