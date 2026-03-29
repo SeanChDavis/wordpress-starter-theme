@@ -6,7 +6,7 @@ input[type="submit"],
 .wp-block-search__button {
 	background-color: var(--action);
 	border: 0;
-	border-radius: 50px;
+	border-radius: $button-border-radius;
 	color: var(--white);
 	display: inline-block;
 	font-family: $font-heading;
