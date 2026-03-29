@@ -168,6 +168,7 @@ h6, .h6 {
 
 p {
   margin-bottom: clamp(1.25rem, 2vw, 1.67rem);
+  margin-top: 0;
 }
 p:last-child {
   margin-bottom: 0;
