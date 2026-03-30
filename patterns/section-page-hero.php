@@ -5,25 +5,30 @@
  * Categories: wst-page-sections-elements
  */
 ?>
-<!-- wp:group {"backgroundColor":"the-lightest","className":"page-header large text-center","layout":{"type":"constrained"}} -->
-<div class="wp-block-group page-header large text-center has-the-lightest-background-color has-background">
+<!-- wp:group {"backgroundColor":"the-lightest","className":"page-header large","layout":{"type":"constrained"}} -->
+<div class="wp-block-group page-header large has-the-lightest-background-color has-background">
 
-	<!-- wp:heading {"level":1} -->
-	<h1 class="wp-block-heading">A Compelling Headline</h1>
-	<!-- /wp:heading -->
+	<!-- wp:group {"textAlign":"center","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group has-text-align-center">
 
-	<!-- wp:paragraph -->
-	<p>Supporting text that communicates your core value proposition. Keep it clear and concise — one or two sentences works best.</p>
-	<!-- /wp:paragraph -->
+		<!-- wp:heading {"level":1} -->
+		<h1 class="wp-block-heading">A Compelling Headline</h1>
+		<!-- /wp:heading -->
 
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-	<div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
-		<div class="wp-block-button">
-			<a class="wp-block-button__link has-text-align-center wp-element-button" href="#">Learn More</a>
+		<!-- wp:paragraph {"className":"page-description"} -->
+		<p class="page-description">Supporting text that communicates your core value proposition. Keep it clear and concise — one or two sentences works best.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-buttons">
+			<!-- wp:button -->
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Learn More</a></div>
+			<!-- /wp:button -->
 		</div>
-		<!-- /wp:button -->
+		<!-- /wp:buttons -->
+
 	</div>
-	<!-- /wp:buttons -->
+	<!-- /wp:group -->
 
 	<!-- wp:spacer {"height":"2.5rem"} -->
 	<div style="height:2.5rem" aria-hidden="true" class="wp-block-spacer"></div>

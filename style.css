@@ -10760,6 +10760,10 @@ section[class*=-section] .section-header .section-description {
   color: var(--subdued-body);
   max-width: 640px;
 }
+.page-header .has-text-align-center .page-description {
+  margin-left: auto;
+  margin-right: auto;
+}
 .page-header .entry-meta {
   margin-top: 1rem;
 }

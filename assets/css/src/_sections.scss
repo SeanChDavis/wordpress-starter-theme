@@ -33,6 +33,11 @@ section[class*="-section"] {
 		max-width: 640px;
 	}
 
+	.has-text-align-center .page-description {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.entry-meta {
 		margin-top: 1rem;
 	}
