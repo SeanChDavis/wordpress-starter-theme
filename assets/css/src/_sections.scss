@@ -11,9 +11,12 @@ section[class*="-section"] {
 
 .page-header {
 
-	.container {
-		padding-bottom: clamp(2rem, 6.45vw, 4rem);
-		padding-top: clamp(2rem, 6.45vw, 4rem);
+	&.page-header-spacing {
+
+		.container,
+		& > .wp-block-group__inner-container {
+			@include section-container__page-header;
+		}
 	}
 
 	.page-title {

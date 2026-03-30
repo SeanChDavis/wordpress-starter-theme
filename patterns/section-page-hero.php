@@ -1,0 +1,104 @@
+<?php
+/**
+ * Title: Section - Page Hero
+ * Slug: section-page-hero
+ * Categories: wst-page-sections-elements
+ */
+?>
+<!-- wp:group {"backgroundColor":"the-lightest","className":"page-header large text-center","layout":{"type":"constrained"}} -->
+<div class="wp-block-group page-header large text-center has-the-lightest-background-color has-background">
+
+	<!-- wp:heading {"level":1} -->
+	<h1 class="wp-block-heading">A Compelling Headline</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph -->
+	<p>Supporting text that communicates your core value proposition. Keep it clear and concise — one or two sentences works best.</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+	<div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
+		<div class="wp-block-button">
+			<a class="wp-block-button__link has-text-align-center wp-element-button" href="#">Learn More</a>
+		</div>
+		<!-- /wp:button -->
+	</div>
+	<!-- /wp:buttons -->
+
+	<!-- wp:spacer {"height":"2.5rem"} -->
+	<div style="height:2.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
+	<div class="wp-block-columns"><!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"backgroundColor":"white","className":"px-5 px-md-4 px-xxl-5 py-5 py-md-4 py-xxl-5 rounded-2","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group px-5 px-md-4 px-xxl-5 py-5 py-md-4 py-xxl-5 rounded-2 has-white-background-color has-background">
+				<!-- wp:heading {"textAlign":"center","level":3,"className":"h5 mb-3"} -->
+				<h3 class="wp-block-heading has-text-align-center h5 mb-3">Sweet Feature</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","textColor":"subdued-body"} -->
+				<p class="has-text-align-center has-subdued-body-color has-text-color">This is text inside one of three columns. Let's see what we can do here inside the editor.</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:buttons {"className":"mt-2","layout":{"type":"flex","justifyContent":"center"},"fontSize":"small"} -->
+				<div class="wp-block-buttons has-custom-font-size mt-2 has-small-font-size">
+					<!-- wp:button {"backgroundColor":"the-darkest"} -->
+					<div class="wp-block-button"><a
+								class="wp-block-button__link has-the-darkest-background-color has-background wp-element-button"
+								href="#">Learn More</a></div>
+					<!-- /wp:button --></div>
+				<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"backgroundColor":"white","className":"px-5 px-md-4 px-xxl-5 py-5 py-md-4 py-xxl-5 rounded-2","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group px-5 px-md-4 px-xxl-5 py-5 py-md-4 py-xxl-5 rounded-2 has-white-background-color has-background">
+				<!-- wp:heading {"textAlign":"center","level":3,"className":"h5 mb-3"} -->
+				<h3 class="wp-block-heading has-text-align-center h5 mb-3">Better Feature</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","textColor":"subdued-body"} -->
+				<p class="has-text-align-center has-subdued-body-color has-text-color">This is text inside one of three columns. Let's see what we can do here inside the editor.</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:buttons {"className":"mt-2","layout":{"type":"flex","justifyContent":"center"},"fontSize":"small"} -->
+				<div class="wp-block-buttons has-custom-font-size mt-2 has-small-font-size">
+					<!-- wp:button {"backgroundColor":"the-darkest"} -->
+					<div class="wp-block-button"><a
+								class="wp-block-button__link has-the-darkest-background-color has-background wp-element-button"
+								href="#">Learn More</a></div>
+					<!-- /wp:button --></div>
+				<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+		<!-- /wp:column -->
+
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"backgroundColor":"white","className":"px-5 px-md-4 px-xxl-5 py-5 py-md-4 py-xxl-5 rounded-2","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group px-5 px-md-4 px-xxl-5 py-5 py-md-4 py-xxl-5 rounded-2 has-white-background-color has-background">
+				<!-- wp:heading {"textAlign":"center","level":3,"className":"h5 mb-3"} -->
+				<h3 class="wp-block-heading has-text-align-center h5 mb-3">Great Feature</h3>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"align":"center","textColor":"subdued-body"} -->
+				<p class="has-text-align-center has-subdued-body-color has-text-color">This is text inside one of three columns. Let's see what we can do here inside the editor.</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:buttons {"className":"mt-2","layout":{"type":"flex","justifyContent":"center"},"fontSize":"small"} -->
+				<div class="wp-block-buttons has-custom-font-size mt-2 has-small-font-size">
+					<!-- wp:button {"backgroundColor":"the-darkest"} -->
+					<div class="wp-block-button"><a
+								class="wp-block-button__link has-the-darkest-background-color has-background wp-element-button"
+								href="#">Learn More</a></div>
+					<!-- /wp:button --></div>
+				<!-- /wp:buttons --></div>
+			<!-- /wp:group --></div>
+		<!-- /wp:column --></div>
+	<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->

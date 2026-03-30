@@ -102,6 +102,9 @@ body {
  * Represents: class="container huge"
  */
 /**
+ * Represents: class="container" for standard page headers
+ */
+/**
  * Represents: class="container no-vertical-spacing"
  */
 /**
@@ -135,10 +138,7 @@ h6, .h6,
 }
 
 h1, .h1,
-h2, .h2,
-.page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
-.page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
-.page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child {
+h2, .h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -525,6 +525,10 @@ body .wp-block-post-content > [class*=wp-block-].large > [class*=__inner-contain
 body .wp-block-post-content > [class*=wp-block-].huge > [class*=__inner-container] {
   padding-bottom: clamp(2.5rem, 11.6vw, 9rem);
   padding-top: clamp(2.5rem, 11.6vw, 9rem);
+}
+body .wp-block-post-content > [class*=wp-block-].page-header-spacing > [class*=__inner-container] {
+  padding-bottom: clamp(2rem, 6.45vw, 4rem);
+  padding-top: clamp(2rem, 6.45vw, 4rem);
 }
 body .wp-block-post-content > [class*=wp-block-].no-vertical-spacing > [class*=__inner-container] {
   padding-bottom: 0;

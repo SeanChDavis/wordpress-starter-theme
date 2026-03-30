@@ -9411,6 +9411,9 @@ Text Domain: wst
  * Represents: class="container huge"
  */
 /**
+ * Represents: class="container" for standard page headers
+ */
+/**
  * Represents: class="container no-vertical-spacing"
  */
 /**
@@ -10435,10 +10438,7 @@ h6, .h6,
 }
 
 h1, .h1,
-h2, .h2,
-.page-header.wp-block-group > .wp-block-group__inner-container > h1:first-child,
-.page-header.wp-block-group > .wp-block-group__inner-container > h2:first-child,
-.page-header.wp-block-group > .wp-block-group__inner-container > h3:first-child {
+h2, .h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -10704,12 +10704,13 @@ table {
   padding-bottom: clamp(2.5rem, 11.6vw, 9rem);
   padding-top: clamp(2.5rem, 11.6vw, 9rem);
 }
+.page-template-template-page-sections .page-sections-content > [class*=wp-block-].page-header-spacing > [class*=__inner-container] {
+  padding-bottom: clamp(2rem, 6.45vw, 4rem);
+  padding-top: clamp(2rem, 6.45vw, 4rem);
+}
 .page-template-template-page-sections .page-sections-content > [class*=wp-block-].no-vertical-spacing > [class*=__inner-container] {
   padding-bottom: 0;
   padding-top: 0;
-}
-.page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > h1:first-child, .page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > h2:first-child, .page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > h3:first-child {
-  margin-bottom: 0.75rem;
 }
 .page-template-template-page-sections .page-sections-content > .wp-block-group.page-header > .wp-block-group__inner-container.is-layout-constrained > p {
   max-width: 640px;
@@ -10745,7 +10746,7 @@ section[class*=-section] .section-header .section-description {
   color: var(--subdued-body);
 }
 
-.page-header .container {
+.page-header.page-header-spacing .container, .page-header.page-header-spacing > .wp-block-group__inner-container {
   padding-bottom: clamp(2rem, 6.45vw, 4rem);
   padding-top: clamp(2rem, 6.45vw, 4rem);
 }

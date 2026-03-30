@@ -85,6 +85,14 @@
 }
 
 /**
+ * Represents: class="container" for standard page headers
+ */
+@mixin section-container__page-header {
+	padding-bottom: clamp(2rem, 6.45vw, 4rem);
+	padding-top: clamp(2rem, 6.45vw, 4rem);
+}
+
+/**
  * Represents: class="container no-vertical-spacing"
  */
 @mixin section-container__no-vertical-spacing {
@@ -120,6 +128,10 @@
 
 	&.huge > [class*="__inner-container"] {
 		@include section-container__huge;
+	}
+
+	&.page-header-spacing > [class*="__inner-container"] {
+		@include section-container__page-header;
 	}
 
 	&.no-vertical-spacing > [class*="__inner-container"] {

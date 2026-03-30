@@ -16,7 +16,7 @@ if ( isset( $args['description'] ) && ! empty( $args['description'] ) ) {
 }
 ?>
 
-<section class="page-header background-lightest">
+<section class="page-header page-header-spacing background-lightest">
 	<div class="container">
 		<?php if ( ! empty( $title ) ) { ?>
 			<h1 class="page-title"><?php echo wp_kses_post( $title ); ?></h1>

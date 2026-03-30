@@ -5,8 +5,9 @@
  * Categories: wst-page-sections-elements
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="margin-top:0">
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"backgroundColor":"the-lightest","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-the-lightest-background-color has-background" style="margin-top:0">
+
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
     <div class="wp-block-columns"><!-- wp:column -->
         <div class="wp-block-column">
@@ -77,4 +78,5 @@
             <!-- /wp:group --></div>
         <!-- /wp:column --></div>
     <!-- /wp:columns --></div>
+
 <!-- /wp:group -->
