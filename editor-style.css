@@ -114,6 +114,185 @@ body {
 /**
  * Uniformly reduces font size of headings for tight areas
  */
+/**
+ * Theme Reset
+ *
+ * Minimal browser normalization — replaces Bootstrap Reboot.
+ * Intentionally excludes typography, color, and spacing; those are
+ * owned by theme partials.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  overflow: auto;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+select {
+  word-wrap: normal;
+}
+select:disabled {
+  opacity: 1;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type=search]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: grayscale(1);
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+iframe {
+  border: 0;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 html {
   font-family: "Red Hat Display", sans-serif;
   font-size: 18px;
@@ -286,6 +465,124 @@ table {
   max-width: 100%;
 }
 
+label {
+  font-family: "Cal Sans", sans-serif;
+}
+
+.button,
+button,
+input[type=submit],
+.wp-block-button__link,
+.wp-block-file__button,
+.wp-block-search__button {
+  background-color: var(--action);
+  border: 0;
+  border-radius: 5px;
+  color: var(--white);
+  display: inline-block;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 0.88rem;
+  padding: 0.53em 1.7em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.button:active, .button:focus, .button:hover,
+button:active,
+button:focus,
+button:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=submit]:hover,
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-file__button:active,
+.wp-block-file__button:focus,
+.wp-block-file__button:hover,
+.wp-block-search__button:active,
+.wp-block-search__button:focus,
+.wp-block-search__button:hover {
+  color: var(--white);
+  cursor: pointer;
+  opacity: 0.8;
+}
+.button.outline,
+button.outline,
+input[type=submit].outline,
+.wp-block-button__link.outline,
+.wp-block-file__button.outline,
+.wp-block-search__button.outline {
+  background-color: transparent;
+  border: 2px solid var(--action);
+  color: var(--action);
+  padding: calc(0.53em - 2px) calc(1.7em - 2px);
+}
+.button.outline:active, .button.outline:focus, .button.outline:hover,
+button.outline:active,
+button.outline:focus,
+button.outline:hover,
+input[type=submit].outline:active,
+input[type=submit].outline:focus,
+input[type=submit].outline:hover,
+.wp-block-button__link.outline:active,
+.wp-block-button__link.outline:focus,
+.wp-block-button__link.outline:hover,
+.wp-block-file__button.outline:active,
+.wp-block-file__button.outline:focus,
+.wp-block-file__button.outline:hover,
+.wp-block-search__button.outline:active,
+.wp-block-search__button.outline:focus,
+.wp-block-search__button.outline:hover {
+  background-color: var(--action);
+  color: var(--white);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.wp-block-button.is-style-outline .wp-element-button {
+  background-color: transparent;
+  border: 2px solid var(--action);
+  color: var(--action);
+  padding: calc(0.53em - 2px) calc(1.7em - 2px);
+}
+.wp-block-button.is-style-outline .wp-element-button:active, .wp-block-button.is-style-outline .wp-element-button:focus, .wp-block-button.is-style-outline .wp-element-button:hover {
+  background-color: var(--action);
+  border-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password],
+textarea,
+select {
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px inset var(--subdued-body);
+  box-sizing: border-box;
+  padding: 0.53em;
+  width: 100%;
+}
+input[type=text]:active, input[type=text]:focus,
+input[type=email]:active,
+input[type=email]:focus,
+input[type=url]:active,
+input[type=url]:focus,
+input[type=search]:active,
+input[type=search]:focus,
+input[type=password]:active,
+input[type=password]:focus,
+textarea:active,
+textarea:focus,
+select:active,
+select:focus {
+  box-shadow: 0 0 0 2px inset var(--action);
+  outline: 0;
+}
+
 /**
  * Core block styles - both front-end and editor
  */
@@ -414,6 +711,48 @@ table {
   padding: 1.5rem;
 }
 
+section[class*=-section] .section-header {
+  margin-bottom: 3rem;
+}
+section[class*=-section] .section-header .section-description {
+  color: var(--subdued-body);
+}
+
+.page-header.page-header-spacing .container, .page-header.page-header-spacing > .wp-block-group__inner-container {
+  padding-bottom: clamp(2rem, 6.45vw, 4rem);
+  padding-top: clamp(2rem, 6.45vw, 4rem);
+}
+.page-header .page-title {
+  margin-bottom: 0.75rem;
+}
+.page-header .page-title:last-child {
+  margin-bottom: 0;
+}
+.page-header .page-description {
+  color: var(--subdued-body);
+  max-width: 640px;
+}
+.page-header .entry-meta {
+  margin-top: 1rem;
+}
+.page-header form.search-form .search-field {
+  width: clamp(13rem, 50vw, 18rem);
+}
+
+.archive .page-header .page-title,
+.search .page-header .page-title {
+  color: var(--subdued-body);
+  font-size: 0.88rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.archive .page-header .page-title span,
+.search .page-header .page-title span {
+  color: var(--body);
+  line-height: 1.2;
+  text-transform: none;
+}
+
 /**
  * These styles are applied to the editor, separate from front-end styles.
  */
@@ -422,13 +761,9 @@ body {
   /* All user-generated post_content */
   /* Core block: Group */
   /* Core block: Search */
-  /* Core block: Button */
   /**
    * Markup & formatting tweaks
    */
-}
-body * {
-  box-sizing: border-box;
 }
 body .edit-post-visual-editor__post-title-wrapper {
   border-bottom: 1px solid #ccc;
@@ -545,43 +880,6 @@ body .wp-block-group.is-layout-constrained.page-header > .wp-block-group__inner-
 }
 body .wp-block-search .wp-block-search__input {
   width: unset;
-}
-body .wp-block-button__link,
-body .wp-block-file__button,
-body .wp-block-search__button {
-  background-color: var(--action);
-  border: 0;
-  border-radius: 5px;
-  color: var(--white);
-  display: inline-block;
-  font-family: "Cal Sans", sans-serif;
-  font-size: 0.88rem;
-  padding: 0.53em 1.7em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-body .wp-block-button__link:active, body .wp-block-button__link:focus, body .wp-block-button__link:hover,
-body .wp-block-file__button:active,
-body .wp-block-file__button:focus,
-body .wp-block-file__button:hover,
-body .wp-block-search__button:active,
-body .wp-block-search__button:focus,
-body .wp-block-search__button:hover {
-  color: var(--white);
-  cursor: pointer;
-  opacity: 0.8;
-}
-body .wp-block-button.is-style-outline .wp-element-button {
-  background-color: transparent;
-  border: 2px solid var(--action);
-  color: var(--action);
-  padding: calc(0.53em - 2px) calc(1.7em - 2px);
-}
-body .wp-block-button.is-style-outline .wp-element-button:active, body .wp-block-button.is-style-outline .wp-element-button:focus, body .wp-block-button.is-style-outline .wp-element-button:hover {
-  background-color: var(--action);
-  border-color: transparent;
-  color: var(--white);
-  cursor: pointer;
 }
 body h1, body .h1,
 body h2, body .h2 {
