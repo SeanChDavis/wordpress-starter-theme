@@ -8,15 +8,15 @@
 <!-- wp:group {"backgroundColor":"the-lightest","className":"page-header large","layout":{"type":"constrained"}} -->
 <div class="wp-block-group page-header large has-the-lightest-background-color has-background">
 
-	<!-- wp:group {"textAlign":"center","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group has-text-align-center">
+	<!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group">
 
-		<!-- wp:heading {"level":1} -->
-		<h1 class="wp-block-heading">A Compelling Headline</h1>
+		<!-- wp:heading {"textAlign":"center","level":1} -->
+		<h1 class="wp-block-heading has-text-align-center">A Compelling Headline</h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"className":"page-description"} -->
-		<p class="page-description">Supporting text that communicates your core value proposition. Keep it clear and concise — one or two sentences works best.</p>
+		<!-- wp:paragraph {"align":"center","className":"page-description has-text-align-center"} -->
+		<p class="page-description has-text-align-center">Supporting text that communicates your core value proposition. Keep it clear and concise — one or two sentences works best.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
